@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
@@ -49,6 +50,77 @@ class User implements UserInterface
      * @ORM\OneToMany(targetEntity="App\Entity\Statistic", mappedBy="user")
      */
     private $statistics;
+
+    /**
+     * @ORM\Column(type="string", length=9)
+     */
+    private $phone;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $numberOfWins;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $status;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $priority;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $lastActivityAt;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $rankingPosition;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $maxPointsPerQueue;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $minPointsPerQueue;
+
+    /**
+     * @var \DateTime $created
+     *
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
+     */
+    private $created;
+
+    /**
+     * @var \DateTime $updated
+     *
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
+     */
+    private $updated;
+
+    /**
+     * @ORM\Column(type="string", length=20)
+     */
+    private $username;
+
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    public function getUpdated()
+    {
+        return $this->updated;
+    }
 
     public function __construct()
     {
@@ -224,6 +296,109 @@ class User implements UserInterface
                 $statistic->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPhone(): ?string
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(string $phone): self
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function getNumberOfWins(): ?int
+    {
+        return $this->numberOfWins;
+    }
+
+    public function setNumberOfWins(int $numberOfWins): self
+    {
+        $this->numberOfWins = $numberOfWins;
+
+        return $this;
+    }
+
+    public function getStatus(): ?int
+    {
+        return $this->status;
+    }
+
+    public function setStatus(int $status): self
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    public function getPriority(): ?int
+    {
+        return $this->priority;
+    }
+
+    public function setPriority(int $priority): self
+    {
+        $this->priority = $priority;
+
+        return $this;
+    }
+
+    public function getLastActivityAt(): ?\DateTimeInterface
+    {
+        return $this->lastActivityAt;
+    }
+
+    public function setLastActivityAt(?\DateTimeInterface $lastActivityAt): self
+    {
+        $this->lastActivityAt = $lastActivityAt;
+
+        return $this;
+    }
+
+    public function getRankingPosition(): ?int
+    {
+        return $this->rankingPosition;
+    }
+
+    public function setRankingPosition(int $rankingPosition): self
+    {
+        $this->rankingPosition = $rankingPosition;
+
+        return $this;
+    }
+
+    public function getMaxPointsPerQueue(): ?int
+    {
+        return $this->maxPointsPerQueue;
+    }
+
+    public function setMaxPointsPerQueue(int $maxPointsPerQueue): self
+    {
+        $this->maxPointsPerQueue = $maxPointsPerQueue;
+
+        return $this;
+    }
+
+    public function getMinPointsPerQueue(): ?int
+    {
+        return $this->minPointsPerQueue;
+    }
+
+    public function setMinPointsPerQueue(int $minPointsPerQueue): self
+    {
+        $this->minPointsPerQueue = $minPointsPerQueue;
+
+        return $this;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
 
         return $this;
     }

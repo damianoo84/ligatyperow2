@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\MeetRepository")
@@ -51,6 +52,52 @@ class Meet
      * @ORM\OneToMany(targetEntity="App\Entity\Type", mappedBy="meet")
      */
     private $types;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $hostGoals;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $guestGoals;
+
+    /**
+     * @ORM\Column(type="string", length=160, nullable=true)
+     */
+    private $term;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $position;
+
+    /**
+     * @var \DateTime $created
+     *
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
+     */
+    private $created;
+
+    /**
+     * @var \DateTime $updated
+     *
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
+     */
+    private $updated;
+
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    public function getUpdated()
+    {
+        return $this->updated;
+    }
 
     public function __construct()
     {
@@ -149,6 +196,54 @@ class Meet
                 $type->setMeet(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getHostGoals(): ?int
+    {
+        return $this->hostGoals;
+    }
+
+    public function setHostGoals(?int $hostGoals): self
+    {
+        $this->hostGoals = $hostGoals;
+
+        return $this;
+    }
+
+    public function getGuestGoals(): ?int
+    {
+        return $this->guestGoals;
+    }
+
+    public function setGuestGoals(?int $guestGoals): self
+    {
+        $this->guestGoals = $guestGoals;
+
+        return $this;
+    }
+
+    public function getTerm(): ?string
+    {
+        return $this->term;
+    }
+
+    public function setTerm(?string $term): self
+    {
+        $this->term = $term;
+
+        return $this;
+    }
+
+    public function getPosition(): ?int
+    {
+        return $this->position;
+    }
+
+    public function setPosition(int $position): self
+    {
+        $this->position = $position;
 
         return $this;
     }
