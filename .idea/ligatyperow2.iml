@@ -118,5 +118,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="liga_typerow" />
+    <orderEntry type="module" module-name="liga_typerow" />
   </component>
 </module>
