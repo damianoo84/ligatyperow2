@@ -38,7 +38,7 @@ class Comment
      * @var \DateTime $created
      *
      * @Gedmo\Timestampable(on="create")
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $created;
 
@@ -46,7 +46,7 @@ class Comment
      * @var \DateTime $updated
      *
      * @Gedmo\Timestampable(on="update")
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $updated;
 
