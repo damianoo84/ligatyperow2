@@ -7,7 +7,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use App\Entity\Comment;
 
-class CommentsFixtures  extends Fixture implements OrderedFixtureInterface {
+class CommentsFixtures extends Fixture implements OrderedFixtureInterface {
 
     public function getOrder() {
         return 1;
@@ -44,7 +44,6 @@ class CommentsFixtures  extends Fixture implements OrderedFixtureInterface {
         }
         
         $manager->flush();
-
     }
     
 }
