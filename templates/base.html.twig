@@ -1,12 +1,96 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Liga Typerów</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    {% endblock %}
+
+    <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js') }}"></script>
+</head>
+<body>
+
+{% set season = get_season() %}
+
+{% if season == null %}
+    {% set season = 15 %}
+{% endif %}
+
+<div id="header_01">
+    <img class="img1" src="{{ asset('images/mainphoto.jpg') }}" />
+    <img class="img2" src="{{ asset('images/mainphoto2.jpg') }}" />
+</div>
+
+<div id="info_02">
+    {% block info %}
+        {% if curr_matchday().finish is defined %}
+            Kolejny sezon ligi typerów już od 3 lutego
+        {% else %}
+            Kolejka {{ curr_matchday().name }}/15 | {{ curr_matchday().dateFrom|date('d.m.Y') }} - {{ curr_matchday().dateTo|date('d.m.Y') }}
+        {% endif %}
+    {% endblock %}
+</div>
+
+<div id="menu_03">
+    <ul class="navigation" id="myNav">
+        <li><a href="{{ path('liga_typerow_table') }}">TABELA</a></li>
+        {% if curr_matchday().finish is not defined %}
+            <li><a href="{{ path('liga_typerow_types') }}">TYP</a></li>
+        {% endif %}
+        {# Jeśli koniec ostatniej kolejki to ustawiaj ostatnią 15 #}
+        <li><a href="{{ path('liga_typerow_userstypes', {'matchday' : curr_matchday().name }) }}">TYPY</a></li>
+        <li><a href="{{ path('liga_typerow_ranking') }}">RANKING</a></li>
+        <li><a href="{{ path('liga_typerow_history', {'season' : season == 1 ? season : season-1}) }}">HISTORIA</a></li>
+        <li><a href="{{ path('liga_typerow_forum') }}">FORUM <b class="red">({{ sum_comments("17") }})</b></a></li>
+        <li class="icon">
+            <a href="javascript:void(0);" >&#9776;</a>
+        </li>
+    </ul>
+</div>
+
+<div id="content_04">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<div id="info_bar_05">
+    {% block infobar %}
+    {% endblock %}
+</div>
+
+<div id="logged_users_06">
+    {% if app.user %}
+        <p class="p_log_user"><b>Obecnie zalogowani</b>:
+            {% for user in log_users() %}
+                {{ user.username }}
+            {% endfor %}
+        </p>
+    {% endif %}
+</div>
+
+<div id="footer_07">
+    {% if app.user %}
+        <a class="a_footer" href="{{ path('liga_typerow_principles') }}">ZASADY</a>
+        <a class="a_footer" href="{{ path('liga_typerow_account') }}">KONTO</a>
+        <a class="a_footer" href="{{ path('_logout') }}">WYLOGUJ</a>
+    {% endif %}
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('li.icon').click(function() {
+            $('#myNav').toggleClass('responsive');
+        });
+    });
+</script>
+{% block javascripts %}
+    <script src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
+{% endblock %}
+</body>
 </html>

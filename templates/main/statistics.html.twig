@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Gracz</th>
+            <th>Mecze 2 pkt</th>
+            <th>Mecze 4 pkt</th>
+            <th>Suma</th>
+        </tr>
+        {% for key,stat in stats %}
+            <tr>
+                <td>{{ key }}</td>
+                <td>{{ stat.match2 }}</td>
+                <td>{{ stat.match4 }}</td>
+                <td>{{ stat.match2 + stat.match4}}</td>
+            </tr>
+        {% endfor %}
+    </table> 
+{% endblock %}

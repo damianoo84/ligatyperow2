@@ -2,36 +2,33 @@
 
 namespace App\Twig;
 
-use Symfony\Bridge\Doctrine\RegistryInterface;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class AppExtension extends \Twig_Extension{
+class AppExtension extends AbstractExtension{
     
     protected $doctrine;
-    
-    public function __construct(RegistryInterface $doctrine)
-    {
-        $this->doctrine = $doctrine;
-    }
-    
+
     public function getFunctions()
     {
-        return array(
-            new \Twig_SimpleFunction('curr_matchday', array($this, 'getCurrentMatchday')),
-            new \Twig_SimpleFunction('log_users', array($this, 'usersLogged')),
-            new \Twig_SimpleFunction('find_matchday', array($this, 'getMatchdayByName')),
-            new \Twig_SimpleFunction('compare_date', array($this, 'compareDate')),
-            new \Twig_SimpleFunction('get_users', array($this, 'getUsers')),
-            new \Twig_SimpleFunction('get_meets', array($this, 'meetsByMatchday')),
-            new \Twig_SimpleFunction('is_typed', array($this, 'isTyped')),
-            new \Twig_SimpleFunction('sum_comments', array($this, 'getSumComments')),
-            new \Twig_SimpleFunction('get_season', array($this, 'getSeasonId')),
-            new \Twig_SimpleFunction('get_season_name', array($this, 'getSeasonName')),
-        );
+        return [
+            new TwigFunction('curr_matchday', [$this, 'getCurrentMatchday']),
+            new TwigFunction('log_users', [$this, 'usersLogged']),
+            new TwigFunction('find_matchday', [$this, 'getMatchdayByName']),
+            new TwigFunction('compare_date', [$this, 'compareDate']),
+            new TwigFunction('get_users', [$this, 'getUsers']),
+            new TwigFunction('get_meets', [$this, 'meetsByMatchday']),
+            new TwigFunction('is_typed', [$this, 'isTyped']),
+            new TwigFunction('sum_comments', [$this, 'getSumComments']),
+            new TwigFunction('get_season', [$this, 'getSeasonId']),
+            new TwigFunction('get_season_name', [$this, 'getSeasonName']),
+        ];
+
     }
     
     // get current matchday
     public function getCurrentMatchday(){
-        $repository = $this->doctrine->getRepository('AppBundle:Matchday');
+        $repository = $this->doctrine->getRepository('Matchday:class');
         $matchday = $repository->getMatchday();
         
         if($matchday == NULL){
@@ -45,7 +42,7 @@ class AppExtension extends \Twig_Extension{
     
     // get matchday by name
     public function getMatchdayByName($name){
-        $repository = $this->doctrine->getRepository('AppBundle:Matchday');
+        $repository = $this->doctrine->getRepository('Matchday:class');
         $matchday = $repository->findOneByName($name);
 
         return $matchday;
@@ -54,7 +51,7 @@ class AppExtension extends \Twig_Extension{
     // compare date
     public function compareDate($id){
         
-        $repository = $this->doctrine->getRepository('AppBundle:Matchday');
+        $repository = $this->doctrine->getRepository('Matchday:class');
         $matchday = $repository->find($id);
         
         $currDate = \DateTime::createFromFormat('Y-m-d',date('Y-m-d'));
@@ -72,7 +69,7 @@ class AppExtension extends \Twig_Extension{
     
     // get all users
     public function getUsers(){
-        $userRepo = $this->doctrine->getRepository('AppBundle:User');
+        $userRepo = $this->doctrine->getRepository('User:class');
         $users = $userRepo->findByStatus(1);
         
         return $users;
@@ -80,7 +77,7 @@ class AppExtension extends \Twig_Extension{
     
     // get current logged users
     public function usersLogged(){
-        $repository = $this->doctrine->getRepository('AppBundle:User');
+        $repository = $this->doctrine->getRepository('User:class');
         $users = $repository->getActive();
         
         return $users;
@@ -88,7 +85,7 @@ class AppExtension extends \Twig_Extension{
     
     // get current meets
     public function meetsByMatchday($matchday){
-        $repository = $this->doctrine->getRepository('AppBundle:Meet');
+        $repository = $this->doctrine->getRepository('Meet:class');
         $meets = $repository->findBy(array('matchday' => $matchday));
         
         return $meets;
@@ -97,7 +94,7 @@ class AppExtension extends \Twig_Extension{
     // is typed 
     public function isTyped($matchday, $user){
         
-        $repository = $this->doctrine->getRepository('AppBundle:Type');
+        $repository = $this->doctrine->getRepository('Type:class');
         $isTyped = $repository->getUserTypes($matchday, $user);
         
         if(count($isTyped) != 0){
@@ -109,7 +106,7 @@ class AppExtension extends \Twig_Extension{
     
     public function getSumComments($season){
         
-        $repository = $this->doctrine->getRepository('AppBundle:Comment');
+        $repository = $this->doctrine->getRepository('Comment:class');
         $comment = $repository->findBySeason($season);
         
         $sum = count($comment);
@@ -119,16 +116,14 @@ class AppExtension extends \Twig_Extension{
     
     public function getSeasonId(){
         
-        $repository = $this->doctrine->getRepository('AppBundle:Season');
-        $season = $repository->getSeason();
-        
-        return $season;
+        $repository = $this->doctrine->getRepository('Season:class');
+        return $repository->getSeason();
         
     }
     
     public function getSeasonName($seasonId){
         
-        $repository = $this->doctrine->getRepository('AppBundle:Season');
+        $repository = $this->doctrine->getRepository('Season:class');
         $seasonName = $repository->find($seasonId);
         
 //        var_dump($seasonName);

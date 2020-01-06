@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    
+    {% if compare_date(app.request.get('matchday')) %}
+        {% set nextMatchday = true %}
+    {% else %}
+        {% set nextMatchday = false %}
+    {% endif %}
+
+    {% if types is not empty %}
+        <table class="tab_types">
+            <tr class="type_header">
+                <th class="team_matchday">Mecze/Gracze</th>
+                <th class="team_matchday_short">M/G</th>
+                <th class="team_score">wynik</th>
+                {% for user in get_users() %}
+                <th class="team_user">{{ user.username }}</th>
+                <th class="team_user_shortname">{{ user.shortname[:1] }}</th>
+                {% endfor %}
+            </tr>
+            {% for key,type in types %}
+                <tr>
+                    <td class="team_name_2">{{ key[9:]|slice(1, (key|length)-15) }}</td>
+                    <td class="team_name_short_2">{{ key[:7] }}</td>
+                    <td class="team_score">{{ key|slice((key|length)-5,5) }}</td>
+                    {% for k,tp in type %}
+                        {% if nextMatchday == true and tp != '-' %}
+                            <td class="type_type">*</td>
+                            <td class="type_type_short">*</td>
+                        {% else %}
+                            <td class="type_type">{{ tp }}</td> 
+                            <td class="type_type_short">{{ tp }}</td> 
+                        {% endif %}
+                    {% endfor %} 
+                </tr>
+            {% endfor %}  
+        </table>
+    {% endif %}
+    
+{% endblock %}
+
+{% block infobar %}
+    <div class="list">
+        <br />
+        <p class="queque_number">Nr. kolejki</p>
+    {% for i in 1..15 %}
+        <a class="type_matchday_big_screen" href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">Kolejka {{ i }}</a> 
+        <a class="type_matchday_small_screen" href="{{ path('liga_typerow_userstypes', {'matchday' : i}) }}">{{ i }}</a> 
+    {% endfor %} 
+    </div>   
+{% endblock infobar %}

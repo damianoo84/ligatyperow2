@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th></th>
+            <th>Śr. pkt na kol.</th>
+            <th>Kolejki</th>
+            <th>Punkty</th>
+            <th>Mecze 2pkt</th>
+            <th>Mecze 4pkt</th>
+            <th>Trafione meczy</th>
+            <th>% meczy</th>
+        </tr>
+        {% for udata in udatas %}
+            <tr>
+                <td>{{ udata.season }}</td>
+                <td>{{ udata.avgPtsForMatch|number_format(2, '.', '.')}}</td>
+                <td>{{ udata.numOfQue }}</td>
+                <td>{{ udata.totalpoints }}</td>
+                <td>{{ udata.match2 }}</td>
+                <td>{{ udata.match4 }}</td>
+                {% set sum = udata.match2 + udata.match4 %}
+                {% set matchCount = udata.numOfQue * 10 %}
+                <td>{{ sum }} / {{ matchCount }}</td>
+                <td>{{ ((sum/matchCount)*100)|round }}%</td>
+            </tr>
+        {% endfor %}
+        <tr>
+    </table>
+
+{% endblock %}

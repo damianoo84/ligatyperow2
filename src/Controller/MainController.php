@@ -44,7 +44,7 @@ class MainController extends AbstractController{
 //        $usr = $this->get('app.twig_extension')->getUsers();
 //        exit(\Doctrine\Common\Util\Debug::dump($usr));
 
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
+        $repository = $this->getDoctrine()->getRepository('Type:class');
         $points = $repository->getPointsPerMatchday($matchday['id']);
 
         return array('points' => $points);
@@ -62,7 +62,7 @@ class MainController extends AbstractController{
         
         $matchdayRepo = $this->get('app.twig_extension')->getMatchdayByName($request->get('matchday'));
         
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
+        $repository = $this->getDoctrine()->getRepository('Type:class');
         $types = $repository->getUsersTypes($matchdayRepo->getName(), $matchdayRepo->getSeason()->getId());
         
         return array('types' => $types);
@@ -80,7 +80,7 @@ class MainController extends AbstractController{
         
         $matchday = $this->get('app.twig_extension')->getCurrentMatchday();
         
-        $repoType = $this->getDoctrine()->getRepository('AppBundle:Type');
+        $repoType = $this->getDoctrine()->getRepository('Type:class');
         $types = $repoType->getUserTypes($matchday['id'], $this->getUser()->getId());
         
         $isTyped = false;
@@ -92,7 +92,7 @@ class MainController extends AbstractController{
             return array('types' => $types);
         }
         
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Meet');
+        $repository = $this->getDoctrine()->getRepository('Meet:class');
         $meets = $repository->getMeetsPerMatchday($matchday['id']);
         
         if ($request->getMethod() == 'POST') {
@@ -146,7 +146,7 @@ class MainController extends AbstractController{
      */
     public function statisticsAction(){
         
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Type');
+        $repository = $this->getDoctrine()->getRepository('Type:class');
         $stats = $repository->getStatistics();
         
         return array('stats' => $stats);
@@ -161,7 +161,7 @@ class MainController extends AbstractController{
      */
     public function rankingAction(){
         
-        $repository = $this->getDoctrine()->getRepository('AppBundle:User');
+        $repository = $this->getDoctrine()->getRepository('User:class');
         $ranks = $repository->getRanking();
         
         return array('ranks' => $ranks);
@@ -223,7 +223,7 @@ class MainController extends AbstractController{
      */
     public function historyAction(Request $request){
         
-        $repository = $this->getDoctrine()->getRepository('AppBundle:History');
+        $repository = $this->getDoctrine()->getRepository('History:class');
         $history = $repository->getHistory($request->get('season'));
         
         return array('points' => $history);
@@ -240,14 +240,14 @@ class MainController extends AbstractController{
         
         $matchday = $this->get('app.twig_extension')->getCurrentMatchday();
 
-        $repoSeason = $this->getDoctrine()->getRepository('AppBundle:Season');
+        $repoSeason = $this->getDoctrine()->getRepository('Season:class');
         $lastSeasonId = $repoSeason->getLastSeason();
             
         if(isset($matchday)){
             $matchday['season_id'] = $lastSeasonId;
         }
         
-        $repoComment = $this->getDoctrine()->getRepository('AppBundle:Comment');
+        $repoComment = $this->getDoctrine()->getRepository('Comment:class');
         $comments = $repoComment->getCommentsBySeason($matchday['season_id']);
         
         if ($request->getMethod() == 'POST') {
@@ -280,7 +280,7 @@ class MainController extends AbstractController{
 
 //    public function accountAction(){
 //        
-//        $repository = $this->getDoctrine()->getRepository('AppBundle:Statistic');
+//        $repository = $this->getDoctrine()->getRepository('Statistic:class');
 //        $udatas = $repository->getUserData($this->getUser());
 //        
 //        return array('udatas' => $udatas);

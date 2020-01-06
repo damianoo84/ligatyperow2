@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+ 
+    <table>
+    {% for key,record in records %}
+        <tr>
+            <td>{{ key }} : {{ record }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}

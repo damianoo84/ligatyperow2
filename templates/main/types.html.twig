@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    
+    {% if curr_matchday().finish is defined %}
+        <p style="text-align: center"></p>
+    {% else %}
+        {# Jeśli użytkownik wytypował to wyświetl tylko typy użytkownika #}
+    {% if (is_typed(curr_matchday().id, app.user.id)) == true %}
+        <table class="tab_types">
+            <tr class="col_name">
+                <th class="type_desc">Opis</th>
+                <th class="type_host">Gospodarz</th>
+                <th class="type_type_host"></th>
+                <th class="type_gap"></th>
+                <th class="type_type_guest"></th>
+                <th class="type_guest">Gość</th>
+                <th class="type_term">Termin</th>
+            </tr>
+            {% for key,type in types %}
+            <tr class="big_screen">          
+                <td class="league">{{ type.name }}</td>
+                <td class="team_name">{{ type.host }}</td>
+                <td class="team_name_short">{{ type.host }}</td>
+                <td class="user_type_2">{{ type.hostType }}</td>
+                <td class="user_type_short">{{ type.hostType }}</td>
+                <td class="gap">-</td>
+                <td class="user_type_2">{{ type.guestType }}</td>
+                <td class="user_type_short">{{ type.guestType }}</td>
+                <td class="team_name">{{ type.guest }}</td>
+                <td class="team_name_short">{{ type.guest }}</td>
+                <td class="term">{{ type.term }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {# w innym przypadku wyświetl formularz do wypełnienia #} 
+    {% elseif (is_typed(curr_matchday().id, app.user.id)) == false %}
+        <form id="form">
+        <table class="tab_types">
+            <tr class="col_name">
+                <th class="type_desc">Opis</th>
+                <th class="type_host">Gospodarz</th>
+                <th class="type_type_host"></th>
+                <th class="type_gap"></th>
+                <th class="type_type_guest"></th>
+                <th class="type_guest">Gość</th>
+                <th class="type_term">Termin</th>
+            </tr>
+            {% for key,meet in meets %}
+            <input type="hidden" name="meet_id[]" value="{{ meet.meet_id }}" />  
+            <tr class="big_screen">
+                <td class="league">{{ meet.league }}</td>
+                <td class="team_name">{{ meet.host }}</td>
+                <td class="team_name_short">{{ meet.host }}</td>
+                <td class="user_type"><input type="text" class="tp" name="hostType[]" maxlength='1' /></td>
+{#                <td class="user_type_short"><input type="text" class="tp" name="hostType[]" maxlength='1' /></td>#}
+                <td class="gap">-</td>
+                <td class="user_type"><input type="text" class="tp" name="guestType[]" maxlength='1' /></td>
+{#                <td class="user_type_short"><input type="text" class="tp" name="guestType[]" maxlength='1' /></td>#}
+                <td class="team_name">{{ meet.guest }}</td>
+                <td class="team_name_short">{{ meet.guest }}</td>
+                <td class="term">{{ meet.term }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+            <p class="button_send"><input type="submit" value="Wyślij"/></p>
+        </form>
+
+    {% endif %}
+    {% endif %}
+        
+    
+       
+        <script type="text/javascript">
+            $(function(){
+               $("#form").submit(function(e){
+                    var form=$(this);
+                    $.ajax({
+                        url:"{{ path('liga_typerow_types') }}",
+                        dataType:"JSON",
+                        type:"POST",
+                        data:form.serialize(),
+                        success:function(){
+                            form.get(0).reset();
+                            console.log("jest ok");
+                            location.reload();
+                        },
+                        error: function() {
+                            console.log("Wystąpił błąd");
+                        }
+                    });
+                    e.preventDefault();
+                });
+            });
+        </script>
+{% endblock %}

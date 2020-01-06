@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <table class="tab_types">
+        <tr>
+            <th></th>
+            <th class="th_rank_username">Gracz</th>
+            <th class="th_rank_pkt">Śr. pkt na kol.</th>
+            <th class="th_rank_seasons">Sezony</th>
+            <th class="th_rank_queue">Kolejki</th>
+            <th class="th_rank_total">Punkty</th>
+            <th class="th_rank_match_2">Mecze 2pkt</th>
+            <th class="th_rank_match_4">Mecze 4pkt</th>
+            <th class="th_rank_win">Wygrane</th>
+        </tr>
+        {% for rank in ranks %}
+            <tr>
+                <td>{{ loop.index }}.</td>
+                {% if(rank.status == 1) %}
+                    <td class="rank_username">{{ rank.username }} *</td>
+                {% else %}
+                    <td class="rank_username">{{ rank.username }}</td>
+                {% endif %}
+                <td class="rank_ptk">{{ rank.avgPtsForMatch|number_format(2, '.', ',') }}</td>
+                <td class="rank_seasons">{{ rank.seasons }}</td>
+                <td class="rank_queue">{{ rank.numOfQue }}</td>
+                <td class="rank_total">{{ rank.totalpoints }}</td>
+                <td class="rank_match_2">{{ rank.match2 }}</td>
+                <td class="rank_match_4">{{ rank.match4 }}</td>
+                <td class="rank_win">{{ rank.wins }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+    </table>
+{% endblock %}
+
+{% block infobar %}
+    <p style="text-align: center;padding:0;margin:0">Stan na dzień: 01-01-2020</p>
+{% endblock infobar %}

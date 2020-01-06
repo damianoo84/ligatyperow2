@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    
+    <table class="tab_types">
+      <tr>
+        <th></th>
+        <th>Gracz</th>
+        {% for i in 0..14 %}
+        <th class="th_table_pkt">{{loop.index}}</th>
+        {% endfor %}
+        <th class="th_table_sum">Suma</th>
+      </tr>
+
+        {% for key,point in points %}
+            <tr>
+                <td class="table_loop">{{ loop.index }}.</td>
+
+                {% set sum = 0 %}
+                {% set counter = 1 %}
+
+                <td class="table_username">{{ point.username }}</td>
+
+                    {% for pt in point.suma %}
+                        <td class="table_pkt">
+
+                            {% if (pt == 0 or pt == '' or pt == null) and curr_matchday().name <= counter %}
+                                {{'0'}}
+                            {% elseif (pt == 0 or pt == '' or pt == null) and curr_matchday().name > counter %}
+                                 {{'0'}}
+                            {% else %}
+                                 {{ pt }}
+                            {% endif %}
+
+                            {% set counter =  counter + 1%}
+                        </td>
+                    {% set sum = sum + pt %}
+                {% endfor %}
+
+                {# tutaj uzupełniam o brakujące kolumny #}
+                {# ale tylko gdy nie ma jeszcze punktów za 15 kolejkę #}
+                {% if point.suma|length < 15 %}
+                    {% for i in 0..(14-point.suma|length) %}
+                        <td class="table_pkt"></td>
+                    {% endfor %}
+                {% endif %}
+
+                <td class="table_sum">{{ sum }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

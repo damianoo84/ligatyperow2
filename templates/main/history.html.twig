@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    
+    <table class="tab_types">
+      <tr>
+        <th></th>
+        <th>Gracz</th>
+        {% for i in 0..14 %}
+        <th class="th_table_pkt">{{loop.index}}</th>
+        {% endfor %}
+        <th class="th_table_sum">Suma</th>
+      </tr>
+        {% for key,point in points %}
+            <tr>
+                <td class="table_loop">{{ loop.index }}.</td>
+                {% set sum = 0 %}
+                    <td class="table_username">{{ point.username }}</td>
+                {% for pt in point.suma %}
+                    {% if loop.index % 2 %}
+                        <td class="table_pkt">{{ pt }}</td>
+                    {% else %}
+                        <td class="table_pkt">{{ pt }}</td>
+                    {% endif %}
+                    {% set sum = sum + pt %}
+                {% endfor %}
+                {% if point.suma|length < 14 %}
+                    {% for i in 0..(14-point.suma|length) %}
+                        <td></td>
+                    {% endfor %}
+                {% endif %}
+                <td class="table_sum">{{ sum }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+ 
+{% endblock %}
+
+{% block infobar %}
+    <div class="list">
+        <br />
+        <p class="queque_number">Nr. sezonu</p>
+        {% for i in 1..17 %}
+            <a class="history_season_big_screen" href="{{ path('liga_typerow_history', {'season' : i}) }}">{{ get_season_name(i) }}</a> 
+            <a class="history_season_small_screen" href="{{ path('liga_typerow_history', {'season' : i}) }}">{{ i }}</a> 
+        {% endfor %}
+    </div>
+{% endblock infobar %}
