@@ -19,6 +19,33 @@ class SeasonRepository extends ServiceEntityRepository
         parent::__construct($registry, Season::class);
     }
 
+    // pobranie obecnego sezonu
+    public function getSeason() {
+        $today = new \DateTime('now');
+        $qb = $this->createQueryBuilder('s');
+        $qb->select('s.id AS season_id')
+            ->where('s.dateEnd > :today')
+            ->setMaxResults(1)
+            ->setParameter('today', $today->format('Y-m-d'))
+        ;
+
+        $result = $qb->getQuery()->getOneOrNullResult();
+
+        return $result['season_id'];
+    }
+
+    // pobranie ostatniego sezonu
+    public function getLastSeason(){
+
+        $qb = $this->createQueryBuilder('s');
+        $qb->select('max(s.id) AS last');
+
+        $result = $qb->getQuery()->getOneOrNullResult();
+
+        return $result['last'];
+    }
+
+
     // /**
     //  * @return Season[] Returns an array of Season objects
     //  */
