@@ -16,11 +16,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
      */
     private $container;
 
-    private $encoder;
+    private $passwordEncoder;
 
-    public function __construct(UserPasswordEncoderInterface $encoder)
+    public function __construct(UserPasswordEncoderInterface $passwordEncoder)
     {
-        $this->encoder = $encoder;
+        $this->passwordEncoder = $passwordEncoder;
     }
 
     public function getOrder() {
@@ -248,7 +248,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
         foreach ($usersList as $userDetails) {
             $user = new User();
 
-            $password = $this->encoder->encodePassword($user, $userDetails['password']);
+            $password = $this->passwordEncoder->encodePassword($user, $userDetails['password']);
             $user->setUsername($userDetails['nick']);
             $user->setEmail($userDetails['email']);
             $user->setPassword("sss");
