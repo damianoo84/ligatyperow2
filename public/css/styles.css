@@ -1,0 +1,462 @@
+body{
+    position:relative;
+    margin:0 auto;
+    background-color: black;
+}
+
+#header_01{
+    z-index: 1;
+    width: 100%;
+    height: 250px;
+    background-color: white;
+}
+
+#header_01 > img {
+    width: 100%;
+    height: 100%;
+}
+
+#info_02{
+    z-index: 2;
+    width:100%;
+    height:40px; 
+    text-align: center;
+    background-color: white;
+}
+
+#menu_03{
+    z-index: 4;
+    background-color:black;
+    width:100%;
+    text-align: center;
+}
+
+ul.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+ul.navigation li {float: left;}
+
+ul.navigation li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+ul.navigation li a:hover {background-color: #555;}
+
+ul.navigation li.icon {display: none;}
+
+
+@media screen and (max-width:680px) {
+    ul.navigation li:not(:first-child) {display: none;}
+    ul.navigation li.icon {
+      float: right;    
+      display: inline-block;
+    }
+}
+
+@media screen and (max-width:680px) {
+    ul.navigation.responsive {position: relative;}
+    ul.navigation.responsive li.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    ul.navigation.responsive li {
+      float: none;
+      display: inline;
+    }
+    ul.navigation.responsive li a {
+      display: block;
+      text-align: left;
+    }
+}
+
+/* content */
+#content_04{
+    z-index: 3;
+    width:100%;
+    min-height:200px;
+    background-color: white;
+}
+
+div.div_login{
+    padding-top: 40px;
+    text-align: center;
+}
+
+div.div_change_pass_box{
+    width:40%;
+    height: 100px;
+    /*background-color: green;*/
+    float: left;
+}
+
+div.div_change_pass_box_small_screen{
+    width:5%;
+    height: 100px;
+    /*background-color: green;*/
+    float: left; 
+}
+
+
+div.div_change_pass{
+    padding-top: 40px;
+    text-align: left;
+    width: 50%;
+    height: 100px;
+    /*background-color: red;*/
+    float: left;
+}
+
+
+
+div.forum_panel{
+    overflow-y: scroll;
+    height: 200px;
+    width: 100%;
+}
+
+div.forum_list_of_comments{
+    margin: 20px;
+    /*background-color: grey;*/
+}
+
+div.new_comment_left{
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+p.new_comment_left{
+    float: left;
+    text-align: left;
+    max-width: 600px;
+    padding: 0;
+    margin: 0;
+}
+
+div.div_date_left{
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+div.div_date_right{
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+p.left_date{
+    float: left;
+    font-size: xx-small;
+    /*background-color: grey;*/
+    display: block;
+}
+
+p.error_page{
+    text-align: center;
+}
+
+p.right_date{
+    float: right;
+    font-size: xx-small;
+    /*background-color: grey;*/
+    display: block;
+}
+
+div.new_comment_right{
+    float: left; 
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+p.new_comment_right{
+    float: right;
+    text-align: right;
+    max-width: 600px;
+    padding: 0;
+    margin: 0;
+}
+
+div.forum_comment{
+    width:100%;
+    /*height: 100px;*/
+}
+
+div.forum_form{
+    width:100%;
+    text-align: center;
+}
+
+b.red{
+    color: red;
+}
+
+textarea{
+    resize: none;
+    width: 100%;
+}
+
+div.forum_textarea{
+    width:100%;
+    position:relative;
+}
+
+ul.ul_principles{
+    list-style-type: none;
+}
+
+/* belka informacyjna */
+#info_bar_05{
+    z-index: 5;
+    width:100%;
+    min-height: 20px;
+    height: 100%;
+    background-color: white;
+}
+
+#logged_users_06{
+    z-index: 6;
+    width:100%;
+    height: 20px;
+    background-color: grey;
+    color: green;
+    font-size: small;
+    text-align: center;
+}
+
+/* stopka */
+#footer_07{
+    z-index: 7;
+    width:100%;
+    background-color: black;
+    height: 100%;
+    min-height: 200px;
+/*    max-height: max-content;*/
+    text-align: center;
+    padding-top: 10px;
+}
+
+a.a_footer{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 14px 16px;
+}
+
+/* USTAWIENIA DLA KAŻDEGO EKRANU   */
+
+table.tab_types { 
+    width: 100%; 
+    /*border-collapse: collapse;*/ 
+}
+
+th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+}
+
+td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: center; 
+}
+
+input[type="text"].tp {
+    width: 10px;
+}
+
+input[type="text"].input_comment{
+    width: 50%;
+}
+
+tr:nth-of-type(odd) { 
+    background: #eee; 
+}
+
+td.team_fullname,td.team_shortname,td.rank_username{
+    text-align: left;
+}
+
+td.table_loop{
+    width: 1%;
+}
+
+td.table_username{
+    text-align: left;
+    width: 15%;
+}
+
+td.table_pkt{
+    width: 5%;
+}
+
+td.table_sum{
+    width: 9%;
+    background-color: grey;
+}
+
+div.list{
+    text-align: center;
+    font-size: x-small;
+    height: 40px;
+    vertical-align: bottom;
+    bottom: 0;
+}
+
+p.p_log_user,p.queque_number{
+    padding: 0;
+    margin: 0;
+}
+
+td.team_name_2{
+    text-align: left;
+}
+
+td.team_name{
+    text-align: center;
+}
+
+td.league{
+    width: 23%;
+}
+
+td.team_name{
+    width: 24%;
+}
+
+td.team_name_short{
+    width: 45%;
+}
+
+td.user_type{
+    width: 2%;
+}
+
+td.gap{
+    width: 2%;
+}
+
+td.term{
+    width: 23%;
+}
+
+p.button_send{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+th.team_score{
+    color: grey;
+}
+
+td.team_score{
+    background-color: grey;
+}
+
+a:link.history_season_big_screen{
+    color: black;
+}
+
+a:link.history_season_small_screen{
+    color: black;
+}
+
+a:visited.history_season_big_screen{
+    color: black;
+}
+
+a:visited.history_season_small_screen{
+    color: black;
+}
+
+a:link.type_matchday_big_screen{
+    color: black;
+}
+
+a:link.type_matchday_big_screen{
+    color: black;
+}
+
+a:visited.type_matchday_big_screen{
+    color: black;
+}
+
+a:visited.type_matchday_big_screen{
+    color: black;
+}
+
+/* USTAWIENIA DLA DUŻEGO EKRANU   */
+
+@media screen and (min-width:680px) {
+
+    td.team_shortname,a.type_matchday_small_screen,
+    a.history_season_small_screen,
+    div.div_change_pass_box_small_screen,
+    td.team_name_short,td.team_name_short_2,img.img2,
+    th.team_user_shortname,th.team_matchday_short,
+    td.user_type_short,td.type_type_short{
+        display: none;
+    }
+    
+}
+
+/* USTAWIENIA DLA MAŁEGO EKRANU   */
+
+@media screen and (max-width:680px) {
+
+    /* niewidoczne */
+    th.type_desc,th.type_term,th.type_gap,
+    td.gap,td.term,
+    td.league,td.team_fullname,
+    a.type_matchday_big_screen,
+    a.history_season_big_screen,
+    td.rank_seasons,td.rank_queue,td.rank_total,
+    td.rank_match_2,td.rank_match_4,
+    th.th_rank_seasons,th.th_rank_queue,
+    th.th_rank_match_2,th.th_rank_match_4,td.rank_win,
+    th.th_rank_total,th.th_rank_win,td.table_pkt, 
+    td.team_name,td.team_name_2,img.img1,
+    div.div_change_pass_box,th.team_score,td.team_score,
+    th.th_table_pkt,th.team_user,th.team_matchday,p.p_log_user,p.queque_number,td.type_type,td.user_type_2{
+        display: none;
+    }
+    
+    td.team_shortname,th.team_user_shortname, th.team_matchday_short,
+    td.team_name_short_2,td.team_name_short,td.user_type_short,
+    td.type_type_short, th.type_guest, th.type_host{
+       font-size: xx-small;
+    }
+    
+    li.ul_principles{
+       padding: 0px 30px 0px 0px;
+    }
+    
+    
+}
+
+p.notification_error{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding-top: 30px;
+}
