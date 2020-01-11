@@ -5,6 +5,12 @@ namespace App\Twig;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 use Symfony\Bridge\Doctrine\RegistryInterface;
+use App\Entity\Matchday;
+use App\Entity\User;
+use App\Entity\Meet;
+use App\Entity\Comment;
+use App\Entity\Type;
+use App\Entity\Season;
 
 class AppExtension extends AbstractExtension{
     
@@ -34,7 +40,7 @@ class AppExtension extends AbstractExtension{
     
     // get current matchday
     public function getCurrentMatchday(){
-        $repository = $this->doctrine->getRepository('App\Entity\Matchday');
+        $repository = $this->doctrine->getRepository(Matchday::class);
         $matchday = $repository->getMatchday();
         
         if($matchday == NULL){
@@ -48,7 +54,7 @@ class AppExtension extends AbstractExtension{
     
     // get matchday by name
     public function getMatchdayByName($name){
-        $repository = $this->doctrine->getRepository('App\Entity\Matchday');
+        $repository = $this->doctrine->getRepository(Matchday::class);
         $matchday = $repository->findOneByName($name);
 
         return $matchday;
@@ -57,7 +63,7 @@ class AppExtension extends AbstractExtension{
     // compare date
     public function compareDate($id){
         
-        $repository = $this->doctrine->getRepository('App\Entity\Matchday');
+        $repository = $this->doctrine->getRepository(Matchday::class);
         $matchday = $repository->find($id);
         
         $currDate = \DateTime::createFromFormat('Y-m-d',date('Y-m-d'));
@@ -75,7 +81,7 @@ class AppExtension extends AbstractExtension{
     
     // get all users
     public function getUsers(){
-        $userRepo = $this->doctrine->getRepository('App\Entity\User');
+        $userRepo = $this->doctrine->getRepository(User::class);
         $users = $userRepo->findByStatus(1);
         
         return $users;
@@ -83,7 +89,7 @@ class AppExtension extends AbstractExtension{
     
     // get current logged users
     public function usersLogged(){
-        $repository = $this->doctrine->getRepository('App\Entity\User');
+        $repository = $this->doctrine->getRepository(User::class);
         $users = $repository->getActive();
         
         return $users;
@@ -91,7 +97,7 @@ class AppExtension extends AbstractExtension{
     
     // get current meets
     public function meetsByMatchday($matchday){
-        $repository = $this->doctrine->getRepository('App\Entity\Meet');
+        $repository = $this->doctrine->getRepository(Meet::class);
         $meets = $repository->findBy(array('matchday' => $matchday));
         
         return $meets;
@@ -100,7 +106,7 @@ class AppExtension extends AbstractExtension{
     // is typed 
     public function isTyped($matchday, $user){
         
-        $repository = $this->doctrine->getRepository('App\Entity\Type');
+        $repository = $this->doctrine->getRepository(Type::class);
         $isTyped = $repository->getUserTypes($matchday, $user);
         
         if(count($isTyped) != 0){
@@ -112,7 +118,7 @@ class AppExtension extends AbstractExtension{
     
     public function getSumComments($season){
         
-        $repository = $this->doctrine->getRepository('App\Entity\Comment');
+        $repository = $this->doctrine->getRepository(Comment::class);
         $comment = $repository->findBySeason($season);
         
         $sum = count($comment);
@@ -122,18 +128,16 @@ class AppExtension extends AbstractExtension{
     
     public function getSeasonId(){
         
-        $repository = $this->doctrine->getRepository('App\Entity\Season');
+        $repository = $this->doctrine->getRepository(Season::class);
         return $repository->getSeason();
         
     }
     
     public function getSeasonName($seasonId){
         
-        $repository = $this->doctrine->getRepository('App\Entity\Season');
+        $repository = $this->doctrine->getRepository(Season::class);
         $seasonName = $repository->find($seasonId);
-        
-//        var_dump($seasonName);
-        
+
         return $seasonName->getName();
         
     }

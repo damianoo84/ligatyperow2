@@ -3,6 +3,8 @@
 namespace App\Repository;
 
 use App\Entity\Type;
+use App\Entity\User;
+use App\Entity\Meet;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
@@ -29,13 +31,13 @@ class TypeRepository extends ServiceEntityRepository
             . 'LEFT JOIN meet m ON t.meet_id = m.id '
             . 'LEFT JOIN matchday md ON m.matchday_id = md.id '
             . 'WHERE u.STATUS = :status '
-            . ' GROUP BY u.username, md.id '
+            . ' GROUP BY u.username, md.id, u.id '
             . 'ORDER BY u.id, md.id ';
         $params = array('status' => 1);
         $result = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
 
         // pobieram aktywnych uzytkownikow
-        $userRepo = $this->getEntityManager()->getRepository('AppBundle:User');
+        $userRepo = $this->getEntityManager()->getRepository(User::class);
         $usr = $userRepo->findByStatus(1);
 
         // tworze tablice gdzie kluczem jest id usera a wartoscia jego nazwa
@@ -161,11 +163,11 @@ class TypeRepository extends ServiceEntityRepository
         $usersTypes = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
 
         // 2. Pobieram mecze w danej kolejce
-        $meetRepo = $this->getEntityManager()->getRepository('AppBundle:Meet');
+        $meetRepo = $this->getEntityManager()->getRepository(Meet::class);
         $meets = $meetRepo->findByMatchday($matchday);
 
         // 3. Pobieram wszystkich aktywnych użytkowników
-        $userRepo = $this->getEntityManager()->getRepository('AppBundle:User');
+        $userRepo = $this->getEntityManager()->getRepository(User::class);
         $users = $userRepo->findByStatus(1);
 
         $matrix = array();
@@ -249,7 +251,7 @@ class TypeRepository extends ServiceEntityRepository
         $userTypes = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
 
         // Pobieram wszystkich aktywnych użytkowników
-        $userRepo = $this->getEntityManager()->getRepository('AppBundle:User');
+        $userRepo = $this->getEntityManager()->getRepository(User::class);
         $users = $userRepo->findByStatus(1);
 
         $phones = array();

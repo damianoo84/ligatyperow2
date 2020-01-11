@@ -9,15 +9,18 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use App\Entity\Type;
 use App\Entity\Meet;
 use App\Entity\Comment;
+use App\Entity\User;
+use App\Entity\History;
 use App\Entity\Season;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use App\Form\ChangePasswordType;
 use App\Exception\UserException;
+use App\Twig\AppExtension;
 
 class MainController extends AbstractController{
-    
+
     /**
      * @Route(
      *      "/",
@@ -29,22 +32,21 @@ class MainController extends AbstractController{
         
         return array();
     }
-    
+
     /**
      * @Route(
      *      "/tabela",
      *      name = "liga_typerow_table"
      * )
      * @Template()
+     * @param AppExtension $appExtension
+     * @return array
      */
-    public function tableAction(){
+    public function tableAction(AppExtension $appExtension){
 
-        $matchday = $this->get('app.twig_extension')->getCurrentMatchday();
+        $matchday = $appExtension->getCurrentMatchday();
 
-//        $usr = $this->get('app.twig_extension')->getUsers();
-//        exit(\Doctrine\Common\Util\Debug::dump($usr));
-
-        $repository = $this->getDoctrine()->getRepository('Type:class');
+        $repository = $this->getDoctrine()->getRepository(Type::class);
         $points = $repository->getPointsPerMatchday($matchday['id']);
 
         return array('points' => $points);
@@ -62,7 +64,7 @@ class MainController extends AbstractController{
         
         $matchdayRepo = $this->get('app.twig_extension')->getMatchdayByName($request->get('matchday'));
         
-        $repository = $this->getDoctrine()->getRepository('Type:class');
+        $repository = $this->getDoctrine()->getRepository(Type::class);
         $types = $repository->getUsersTypes($matchdayRepo->getName(), $matchdayRepo->getSeason()->getId());
         
         return array('types' => $types);
@@ -80,7 +82,7 @@ class MainController extends AbstractController{
         
         $matchday = $this->get('app.twig_extension')->getCurrentMatchday();
         
-        $repoType = $this->getDoctrine()->getRepository('Type:class');
+        $repoType = $this->getDoctrine()->getRepository(Type::class);
         $types = $repoType->getUserTypes($matchday['id'], $this->getUser()->getId());
         
         $isTyped = false;
@@ -92,7 +94,7 @@ class MainController extends AbstractController{
             return array('types' => $types);
         }
         
-        $repository = $this->getDoctrine()->getRepository('Meet:class');
+        $repository = $this->getDoctrine()->getRepository(Meet::class);
         $meets = $repository->getMeetsPerMatchday($matchday['id']);
         
         if ($request->getMethod() == 'POST') {
@@ -146,7 +148,7 @@ class MainController extends AbstractController{
      */
     public function statisticsAction(){
         
-        $repository = $this->getDoctrine()->getRepository('Type:class');
+        $repository = $this->getDoctrine()->getRepository(Type::class);
         $stats = $repository->getStatistics();
         
         return array('stats' => $stats);
@@ -161,7 +163,7 @@ class MainController extends AbstractController{
      */
     public function rankingAction(){
         
-        $repository = $this->getDoctrine()->getRepository('User:class');
+        $repository = $this->getDoctrine()->getRepository(User::class);
         $ranks = $repository->getRanking();
         
         return array('ranks' => $ranks);
@@ -223,7 +225,7 @@ class MainController extends AbstractController{
      */
     public function historyAction(Request $request){
         
-        $repository = $this->getDoctrine()->getRepository('History:class');
+        $repository = $this->getDoctrine()->getRepository(History::class);
         $history = $repository->getHistory($request->get('season'));
         
         return array('points' => $history);
@@ -240,14 +242,14 @@ class MainController extends AbstractController{
         
         $matchday = $this->get('app.twig_extension')->getCurrentMatchday();
 
-        $repoSeason = $this->getDoctrine()->getRepository('Season:class');
+        $repoSeason = $this->getDoctrine()->getRepository(Season::class);
         $lastSeasonId = $repoSeason->getLastSeason();
             
         if(isset($matchday)){
             $matchday['season_id'] = $lastSeasonId;
         }
         
-        $repoComment = $this->getDoctrine()->getRepository('Comment:class');
+        $repoComment = $this->getDoctrine()->getRepository(Comment::class);
         $comments = $repoComment->getCommentsBySeason($matchday['season_id']);
         
         if ($request->getMethod() == 'POST') {
