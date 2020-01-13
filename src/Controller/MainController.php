@@ -60,9 +60,9 @@ class MainController extends AbstractController{
      * )
      * @Template()
      */
-    public function userstypesAction(Request $request){
+    public function userstypesAction(Request $request, AppExtension $appExtension){
         
-        $matchdayRepo = $this->get('app.twig_extension')->getMatchdayByName($request->get('matchday'));
+        $matchdayRepo = $appExtension->getMatchdayByName($request->get('matchday'));
         
         $repository = $this->getDoctrine()->getRepository(Type::class);
         $types = $repository->getUsersTypes($matchdayRepo->getName(), $matchdayRepo->getSeason()->getId());
@@ -238,9 +238,9 @@ class MainController extends AbstractController{
      * )
      * @Template()
      */
-    public function forumAction(Request $request){
+    public function forumAction(Request $request, AppExtension $appExtension){
         
-        $matchday = $this->get('app.twig_extension')->getCurrentMatchday();
+        $matchday = $appExtension->getCurrentMatchday();
 
         $repoSeason = $this->getDoctrine()->getRepository(Season::class);
         $lastSeasonId = $repoSeason->getLastSeason();
