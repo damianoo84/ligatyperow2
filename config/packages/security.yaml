@@ -1,42 +1,29 @@
 security:
-
     encoders:
         App\Entity\User:
             algorithm: auto
 
-    role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
-
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        liga_typerow_users:
+        # used to reload user from session & other features (e.g. switch_user)
+        app_user_provider:
             entity:
-                class: App:User
+                class: App\Entity\User
                 property: username
-
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
         main:
-            switch_user: true
-            pattern:    ^/
             anonymous: ~
-            form_login:
-                check_path: _check_path
-                login_path: app_login
-                always_use_default_target_path: true
-                default_target_path: liga_typerow_table
-            logout:
-                path:   _logout
-                target: liga_typerow_login
             guard:
                 authenticators:
                     - App\Security\LoginFormAuthenticator
+            logout:
+                path: app_logout
 
     access_control:
         - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY}
         - { path: ^/, roles: ROLE_USER}
         - { path: ^/admin-panel, roles: ROLE_SUPER_ADMIN }
-
