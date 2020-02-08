@@ -47,7 +47,7 @@
         <li><a href="{{ path('liga_typerow_userstypes', {'matchday' : curr_matchday().name }) }}">TYPY</a></li>
         <li><a href="{{ path('liga_typerow_ranking') }}">RANKING</a></li>
         <li><a href="{{ path('liga_typerow_history', {'season' : season == 1 ? season : season-1}) }}">HISTORIA</a></li>
-        <li><a href="{{ path('liga_typerow_forum') }}">FORUM <b class="red">({{ sum_comments("17") }})</b></a></li>
+        <li><a href="{{ path('liga_typerow_forum') }}">FORUM <b class="red">({{ sum_comments(season) }})</b></a></li>
         <li class="icon">
             <a href="javascript:void(0);" >&#9776;</a>
         </li>

@@ -47,7 +47,7 @@ class MainController extends AbstractController{
         $matchday = $appExtension->getCurrentMatchday();
 
         $repository = $this->getDoctrine()->getRepository(Type::class);
-        $points = $repository->getPointsPerMatchday($matchday['id']);
+        $points = $repository->getPointsPerMatchday(1);
 
         return array('points' => $points);
     }

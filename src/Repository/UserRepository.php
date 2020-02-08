@@ -19,6 +19,7 @@ class UserRepository extends ServiceEntityRepository
         parent::__construct($registry, User::class);
     }
 
+    // TO DO - zmienić nazwę tej metody
     public function getActive()
     {
         // Pobranie wszystkich zalogowanych obecnie użytkowników
