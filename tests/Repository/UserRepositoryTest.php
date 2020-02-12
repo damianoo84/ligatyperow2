@@ -24,9 +24,14 @@ class UserRepositoryTest extends KernelTestCase {
     public function testShouldCheckActiveUsers() {
 
         $users = $this->entityManager->getRepository(User::class)->getActive();
-        var_dump(count($users));
-
         $this->assertNotNull($users);
+
+    }
+
+    public function testShouldCountNumberOfActiveUsers() {
+
+        $activeUsers = $this->entityManager->getRepository(User::class)->findBy(array('status' => 1));
+        $this->assertEquals(10,count($activeUsers));
 
     }
 

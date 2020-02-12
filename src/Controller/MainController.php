@@ -18,6 +18,8 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 use App\Form\ChangePasswordType;
 use App\Exception\UserException;
 use App\Twig\AppExtension;
+use Psr\Log\LoggerInterface;
+use App\Service\TypeService;
 
 class MainController extends AbstractController{
 
@@ -42,13 +44,10 @@ class MainController extends AbstractController{
      * @param AppExtension $appExtension
      * @return array
      */
-    public function tableAction(AppExtension $appExtension){
+    public function tableAction(LoggerInterface $logger, TypeService $typeService){
 
-        $matchday = $appExtension->getCurrentMatchday();
-
-        $repository = $this->getDoctrine()->getRepository(Type::class);
-        $points = $repository->getPointsPerMatchday(1);
-
+        $logger->info('this is the table action');
+        $points = $typeService->getPointsPerMatchday();
         return array('points' => $points);
     }
     
