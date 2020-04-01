@@ -20,6 +20,8 @@ use App\Exception\UserException;
 use App\Twig\AppExtension;
 use Psr\Log\LoggerInterface;
 use App\Service\TypeService;
+use App\Service\HistoryService;
+
 
 class MainController extends AbstractController{
 
@@ -59,16 +61,41 @@ class MainController extends AbstractController{
      * )
      * @Template()
      */
-    public function userstypesAction(Request $request, AppExtension $appExtension){
+    public function userstypesAction(LoggerInterface $logger, Request $request, TypeService $typeService){
         
-        $matchdayRepo = $appExtension->getMatchdayByName($request->get('matchday'));
-        
-        $repository = $this->getDoctrine()->getRepository(Type::class);
-        $types = $repository->getUsersTypes($matchdayRepo->getName(), $matchdayRepo->getSeason()->getId());
-        
+        $logger->info('this is the userstypes action');
+        $types = $typeService->getUsersTypes($request);
         return array('types' => $types);
     }
-    
+
+    /**
+     * @Route(
+     *      "/ranking",
+     *      name = "liga_typerow_ranking"
+     * )
+     * @Template()
+     */
+    public function rankingAction(LoggerInterface $logger, TypeService $typeService){
+
+        $logger->info('this is the ranking action');
+        $ranks = $typeService->getRanking();
+        return array('ranks' => $ranks);
+    }
+
+    /**
+     * @Route(
+     *      "/historia/{season}",
+     *      name = "liga_typerow_history"
+     * )
+     * @Template()
+     */
+    public function historyAction(LoggerInterface $logger, HistoryService $historyService, Request $request){
+
+        $logger->info('this is the history action');
+        $history = $historyService->getHistory($request);
+        return array('points' => $history);
+    }
+
     /**
      * @Route(
      *      "/typy",
@@ -152,22 +179,7 @@ class MainController extends AbstractController{
         
         return array('stats' => $stats);
     }
-    
-    /**
-     * @Route(
-     *      "/ranking",
-     *      name = "liga_typerow_ranking"
-     * )
-     * @Template()
-     */
-    public function rankingAction(){
-        
-        $repository = $this->getDoctrine()->getRepository(User::class);
-        $ranks = $repository->getRanking();
-        
-        return array('ranks' => $ranks);
-    }
-    
+
     /**
      * @Route(
      *      "/zasady",
@@ -213,21 +225,6 @@ class MainController extends AbstractController{
         );
         
         return array('records' => $records);
-    }
-    
-    /**
-     * @Route(
-     *      "/historia/{season}",
-     *      name = "liga_typerow_history"
-     * )
-     * @Template()
-     */
-    public function historyAction(Request $request){
-        
-        $repository = $this->getDoctrine()->getRepository(History::class);
-        $history = $repository->getHistory($request->get('season'));
-        
-        return array('points' => $history);
     }
 
     /**
