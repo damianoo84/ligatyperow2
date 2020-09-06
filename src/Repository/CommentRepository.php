@@ -24,7 +24,7 @@ class CommentRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('c');
         $qb->select(
             'c.text AS text'
-            ,'c.createdAt AS createdAt'
+            ,'c.created AS createdAt'
             ,'s.id AS season_id'
             ,'u.username AS username'
         )
@@ -32,7 +32,7 @@ class CommentRepository extends ServiceEntityRepository
             ->innerJoin('c.user', 'u')
             ->where('s.id = :season')
             ->setParameter('season', $season)
-            ->orderBy('c.createdAt','DESC')
+            ->orderBy('c.created','DESC')
         ;
 
         $result = $qb->getQuery()->getResult();
@@ -42,32 +42,4 @@ class CommentRepository extends ServiceEntityRepository
 
     }
 
-    // /**
-    //  * @return Comment[] Returns an array of Comment objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('c.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Comment
-    {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }

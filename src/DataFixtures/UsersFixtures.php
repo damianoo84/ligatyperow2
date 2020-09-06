@@ -250,6 +250,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
 
             $password = $this->passwordEncoder->encodePassword($user, $userDetails['password']);
             $user->setUsername($userDetails['nick']);
+            $user->setShortname($userDetails['shortname']);
             $user->setEmail($userDetails['email']);
             $user->setPassword("sss");
             $user->setPassword($password);

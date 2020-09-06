@@ -123,6 +123,12 @@ class SeasonsFixtures extends Fixture implements OrderedFixtureInterface {
                 'dateStart' => '2020-02-10',
                 'dateEnd' => '2020-05-24',
                 'active' => true
+            ),
+            array(
+                'season_name' => 'Jesień 2020',
+                'dateStart' => '2020-09-07',
+                'dateEnd' => '2020-12-20',
+                'active' => true
             )
         );
         

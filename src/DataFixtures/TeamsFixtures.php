@@ -560,7 +560,168 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
                  'team_name' => 'Montpellier',
                  'shortname' => 'MOP',
                  'league' => 'Liga Francuska'
+            ),
+            array(
+                'team_name' => 'Paragwaj',
+                'shortname' => 'PAG',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Chorwacja',
+                'shortname' => 'CHO',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Łotwa',
+                'shortname' => 'ŁOT',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Izrael',
+                'shortname' => 'IZR',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Dania',
+                'shortname' => 'DAN',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Irlandia Płn.',
+                'shortname' => 'IRP',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Kosowo',
+                'shortname' => 'KOS',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Grecja',
+                'shortname' => 'GRE',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Bośnia i H.',
+                'shortname' => 'BOS',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Peru',
+                'shortname' => 'PER',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Norwegia',
+                'shortname' => 'NOR',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Cagliari Calcio',
+                'shortname' => 'CAG',
+                'league' => 'Liga Włoska'
+            ),
+            array(
+                'team_name' => 'RCD Mallorca',
+                'shortname' => 'MAL',
+                'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'SC Freiburg',
+                'shortname' => 'SCF',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'Hertha Berlin',
+                'shortname' => 'HER',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'Union Berlin',
+                'shortname' => 'UNI',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'TSG Hoffenheim',
+                'shortname' => 'TSG',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => '1. FC Koeln',
+                'shortname' => 'KOE',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'Fortuna Düsseldorf',
+                'shortname' => 'FOR',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'FC Augsburg',
+                'shortname' => 'AUG',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'SC Paderborn 07',
+                'shortname' => 'PAD',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => '1. FSV Mainz 05',
+                'shortname' => 'MAI',
+                'league' => 'Liga Niemiecka'
+            ),
+            array(
+                'team_name' => 'Lech Poznań',
+                'shortname' => 'LEC',
+                'league' => 'Liga Polska'
+            ),
+            array(
+                'team_name' => 'Legia Warszawa',
+                'shortname' => 'LEG',
+                'league' => 'Liga Polska'
+            ),
+            array(
+                'team_name' => 'Wisła Kraków',
+                'shortname' => 'WIS',
+                'league' => 'Liga Polska'
+            ),
+            array(
+                'team_name' => 'Osasuna Pampeluna',
+                'shortname' => 'OSA',
+                'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'Bologna FC',
+                'shortname' => 'BOL',
+                'league' => 'Liga Włoska'
+            ),
+            array(
+                'team_name' => 'Fulham FC',
+                'shortname' => 'FUL',
+                'league' => 'Liga Angielska'
+            ),
+            array(
+                'team_name' => 'Crystal Palace',
+                'shortname' => 'CRY',
+                'league' => 'Liga Angielska'
+            ),
+            array(
+                'team_name' => 'Leeds United',
+                'shortname' => 'LEE',
+                'league' => 'Liga Angielska'
+            ),
+            array(
+                'team_name' => 'West Bromwich Albion',
+                'shortname' => 'WBA',
+                'league' => 'Liga Angielska'
+            ),
+            array(
+                'team_name' => 'FC Nantes',
+                'shortname' => 'NAN',
+                'league' => 'Liga Francuska'
             )
+
         );
 
         foreach ($teamsList as $teamsDetails) {

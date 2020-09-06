@@ -112,6 +112,24 @@ class User implements UserInterface
      */
     private $username;
 
+    /**
+     *
+     * @ORM\Column(type="string", length=20 , unique = true)
+     */
+    private $shortname;
+
+    public function setShortname($shortname)
+    {
+        $this->shortname = $shortname;
+
+        return $this;
+    }
+
+    public function getShortname()
+    {
+        return $this->shortname;
+    }
+
     public function getCreated()
     {
         return $this->created;
