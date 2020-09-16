@@ -57,55 +57,104 @@ class TypeService
         return $types;
     }
 
-    public function getMeetsPerMatchday(Request $request){
+    public function getMeets() : array {
 
         $matchday = $this->appExtension->getCurrentMatchday();
 
         $repository = $this->entityManager->getRepository(Meet::class);
         $meets = $repository->getMeetsPerMatchday($matchday['id']);
 
-        if ($request->getMethod() == 'POST') {
-
-            $request = $this->getRequest();
-            $req = $request->request->all();
-
-            $data = array();
-            $counter = count(current($req));
-            foreach (array_keys($req) as $key) {
-                for($i=0; $i<$counter; $i++) {
-                    $data[$i][$key] = $req[$key][$i];
-                }
-            }
-
-            foreach ($data as $key){
-                $type = new Type();
-                $meet = new Meet();
-                $meet = $repository->findOneById($key['meet_id']);
-                $type->setHostType($key['hostType']);
-                $type->setGuestType($key['guestType']);
-                $type->setNumberOfPoints(0);
-                $type->setUser($this->getUser());
-                $type->setMeet($meet);
-
-                $validator = $this->get('validator');
-                $errors = $validator->validate($type);
-
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($meet);
-                $em->persist($type);
-
-                if (count($errors) > 0) {
-                    return $this->redirect($this->generateUrl('liga_typerow_validation'));
-                }
-            }
-            $em->flush();
-
-            return new JsonResponse(array('message' => 'Success!'), 200);
-        }
-
         return $meets;
 
     }
+
+    public function getMeetsPerMatchday(Request $request, User $user){
+
+        $req = $request->request->all();
+        $repository = $this->entityManager->getRepository(Meet::class);
+
+        $data = array();
+        $counter = count(current($req));
+        foreach (array_keys($req) as $key) {
+            for($i=0; $i<$counter; $i++) {
+                $data[$i][$key] = $req[$key][$i];
+            }
+        }
+
+        foreach ($data as $key){
+            $type = new Type();
+            $meet = new Meet();
+            $meet = $repository->findOneById($key['meet_id']);
+            $type->setHostType($key['hostType']);
+            $type->setGuestType($key['guestType']);
+            $type->setNumberOfPoints(0);
+            $type->setUser($user);
+            $type->setMeet($meet);
+
+//            $validator = $this->get('validator');
+//            $errors = $validator->validate($type);
+
+//            $em = $this->getDoctrine()->getManager();
+            $em = $this->entityManager;
+            $em->persist($meet);
+            $em->persist($type);
+
+//            if (count($errors) > 0) {
+//                return $this->redirect($this->generateUrl('liga_typerow_validation'));
+//            }
+        }
+        $em->flush();
+    }
+
+//    public function getMeetsPerMatchday(Request $request){
+//
+//        $matchday = $this->appExtension->getCurrentMatchday();
+//
+//        $repository = $this->entityManager->getRepository(Meet::class);
+//        $meets = $repository->getMeetsPerMatchday($matchday['id']);
+//
+//        if ($request->getMethod() == 'POST') {
+//
+//            $request = $this->getRequest();
+//            $req = $request->request->all();
+//
+//            $data = array();
+//            $counter = count(current($req));
+//            foreach (array_keys($req) as $key) {
+//                for($i=0; $i<$counter; $i++) {
+//                    $data[$i][$key] = $req[$key][$i];
+//                }
+//            }
+//
+//            foreach ($data as $key){
+//                $type = new Type();
+//                $meet = new Meet();
+//                $meet = $repository->findOneById($key['meet_id']);
+//                $type->setHostType($key['hostType']);
+//                $type->setGuestType($key['guestType']);
+//                $type->setNumberOfPoints(0);
+//                $type->setUser($this->getUser());
+//                $type->setMeet($meet);
+//
+//                $validator = $this->get('validator');
+//                $errors = $validator->validate($type);
+//
+//                $em = $this->getDoctrine()->getManager();
+//                $em->persist($meet);
+//                $em->persist($type);
+//
+//                if (count($errors) > 0) {
+//                    return $this->redirect($this->generateUrl('liga_typerow_validation'));
+//                }
+//            }
+//            $em->flush();
+//
+//            return new JsonResponse(array('message' => 'Success!'), 200);
+//        }
+//
+//        return $meets;
+//
+//    }
 
 
 

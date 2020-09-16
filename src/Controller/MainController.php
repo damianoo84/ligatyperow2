@@ -12,7 +12,6 @@ use App\Entity\Comment;
 use App\Entity\User;
 use App\Entity\History;
 use App\Entity\Season;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use App\Form\ChangePasswordType;
@@ -21,7 +20,7 @@ use App\Twig\AppExtension;
 use Psr\Log\LoggerInterface;
 use App\Service\TypeService;
 use App\Service\HistoryService;
-
+use Symfony\Component\HttpFoundation\Request;
 
 class MainController extends AbstractController{
 
@@ -118,7 +117,14 @@ class MainController extends AbstractController{
             return array('types' => $types);
         }
 
-        $meets = $typeService->getMeetsPerMatchday($request);
+        $meets = $typeService->getMeets();
+
+        if ($request->getMethod() == 'POST') {
+            $request->isXmlHttpRequest();
+//            $request->request->get('page');
+            $typeService->getMeetsPerMatchday($request, $this->getUser());
+        }
+
         return array('meets' => $meets);
     }
 
