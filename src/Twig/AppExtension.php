@@ -4,7 +4,7 @@ namespace App\Twig;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
-use Symfony\Bridge\Doctrine\RegistryInterface;
+use Doctrine\Persistence\ManagerRegistry;
 use App\Entity\Matchday;
 use App\Entity\User;
 use App\Entity\Meet;
@@ -16,7 +16,7 @@ class AppExtension extends AbstractExtension{
     
     protected $doctrine;
 
-    public function __construct(RegistryInterface $doctrine)
+    public function __construct(ManagerRegistry $doctrine)
     {
         $this->doctrine = $doctrine;
     }
