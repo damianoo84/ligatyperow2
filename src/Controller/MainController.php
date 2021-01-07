@@ -109,11 +109,11 @@ class MainController extends AbstractController{
         $types = $typeService->getUserTypes($this->getUser()->getId());
 
         $isTyped = false;
-        if(count($types) != 0){
+        if (count($types) != 0) {
             $isTyped = true;
         }
 
-        if($isTyped){
+        if ($isTyped) {
             return array('types' => $types);
         }
 
@@ -121,8 +121,8 @@ class MainController extends AbstractController{
 
         if ($request->getMethod() == 'POST') {
             $request->isXmlHttpRequest();
-//            $request->request->get('page');
             $typeService->getMeetsPerMatchday($request, $this->getUser());
+            return new JsonResponse(array('message' => 'Success!'), 200);
         }
 
         return array('meets' => $meets);

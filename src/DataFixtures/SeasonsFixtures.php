@@ -104,7 +104,7 @@ class SeasonsFixtures extends Fixture implements OrderedFixtureInterface {
                 'season_name' => 'Jesień 2018',
                 'dateStart' => '2018-09-01',
                 'dateEnd' => '2018-12-20',
-                'active' => true
+                'active' => false
             ),
             array(
                 'season_name' => 'Wiosna 2019',
@@ -116,18 +116,24 @@ class SeasonsFixtures extends Fixture implements OrderedFixtureInterface {
                 'season_name' => 'Jesień 2019',
                 'dateStart' => '2019-09-02',
                 'dateEnd' => '2019-12-22',
-                'active' => true
+                'active' => false
             ),
             array(
                 'season_name' => 'Wiosna 2020',
                 'dateStart' => '2020-02-10',
                 'dateEnd' => '2020-05-24',
-                'active' => true
+                'active' => false
             ),
             array(
                 'season_name' => 'Jesień 2020',
                 'dateStart' => '2020-09-07',
                 'dateEnd' => '2020-12-20',
+                'active' => false
+            ),
+            array(
+                'season_name' => 'Wiosna 2021',
+                'dateStart' => '2021-02-01',
+                'dateEnd' => '2021-05-26',
                 'active' => true
             )
         );
