@@ -3,17 +3,12 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-//use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use App\Entity\Type;
-use App\Entity\Meet;
 use App\Entity\Comment;
-use App\Entity\User;
-use App\Entity\History;
 use App\Entity\Season;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use App\Form\ChangePasswordType;
 use App\Exception\UserException;
 use App\Twig\AppExtension;
@@ -135,8 +130,9 @@ class MainController extends AbstractController{
      * )
      * @Template()
      */
-    public function statisticsAction(){
-        
+    public function statisticsAction(LoggerInterface $logger){
+
+        $logger->info('this is the statistics action');
         $repository = $this->getDoctrine()->getRepository(Type::class);
         $stats = $repository->getStatistics();
         
@@ -150,8 +146,9 @@ class MainController extends AbstractController{
      * )
      * @Template()
      */
-    public function principlesAction(){
-        
+    public function principlesAction(LoggerInterface $logger){
+
+        $logger->info('this is the principles action');
         $principles = array(
             'Liga trwa 15 kolejnych tygodni.', 'W każdym tygodniu typujemy 10 wybranych meczy, które odbędą się w tygodniu następnym. '
             , 'Czas na typy to 7 dni liczony od poniedziałku '
@@ -176,8 +173,9 @@ class MainController extends AbstractController{
      * )
      * @Template()
      */
-    public function recordsAction(){
-        
+    public function recordsAction(LoggerInterface $logger){
+
+        $logger->info('this is the records action');
         $records = array(
             'Najwięcej punktów w jednej kolejce' => '26 - Piotrek 1(2x),Krystian,Kuba,Wojtek,Przemek 2',
             'Najwięcej punktów w sezonie' => '224 - Łukasz',
@@ -197,8 +195,9 @@ class MainController extends AbstractController{
      * )
      * @Template()
      */
-    public function forumAction(Request $request, AppExtension $appExtension){
-        
+    public function forumAction(Request $request, AppExtension $appExtension, LoggerInterface $logger){
+
+        $logger->info('this is the forum action');
         $matchday = $appExtension->getCurrentMatchday();
 
         $repoSeason = $this->getDoctrine()->getRepository(Season::class);
@@ -230,44 +229,11 @@ class MainController extends AbstractController{
                 $em->persist($comment);
                 $em->flush();     
             }
-            
-//            return new JsonResponse(array('message' => 'Success!'), 200);
+
             return $this->redirect($this->generateUrl('liga_typerow_forum'));
         }
         
         return array('comments' => $comments, 'matchday' => $matchday);
-    }
-    
-
-//    public function accountAction(){
-//        
-//        $repository = $this->getDoctrine()->getRepository('Statistic:class');
-//        $udatas = $repository->getUserData($this->getUser());
-//        
-//        return array('udatas' => $udatas);
-//    }
-
-    /**
-     * @Route(
-     *      "/validation",
-     *      name = "liga_typerow_validation"
-     * )
-     * @Template()
-     */
-    public function validationAction(){
-        return array();
-    }
-    
-    /**
-     * @Route(
-     *      "/mytest",
-     *      name = "liga_typerow_mytest"
-     * )
-     * 
-     * @Template()
-     */
-    public function myTestAction(){
-        return array();
     }
     
     /**
@@ -278,8 +244,9 @@ class MainController extends AbstractController{
      * 
      * @Template()
      */
-    public function accountSettingsAction(Request $Request)
-    {        
+    public function accountSettingsAction(Request $Request, LoggerInterface $logger)
+    {
+        $logger->info('this is the account action');
         $User = $this->getUser();
         
         // Change Password
