@@ -14,7 +14,7 @@ class ResultListener {
         
         if ($entity instanceof Meet) {
             $meetId = $entity->getId();
-            $typeRepo = $em->getRepository('AppBundle:Type');
+            $typeRepo = $em->getRepository(Type::class);
             $types = $typeRepo->findByMeet($meetId);
             
             foreach ($types as $type){
