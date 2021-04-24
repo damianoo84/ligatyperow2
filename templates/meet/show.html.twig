@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Meet{% endblock %}
+
+{% block content %}
+    <h1>Meet</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ meet.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ meet.name }}</td>
+            </tr>
+            <tr>
+                <th>HostGoals</th>
+                <td>{{ meet.hostGoals }}</td>
+            </tr>
+            <tr>
+                <th>GuestGoals</th>
+                <td>{{ meet.guestGoals }}</td>
+            </tr>
+            <tr>
+                <th>Term</th>
+                <td>{{ meet.term }}</td>
+            </tr>
+            <tr>
+                <th>Position</th>
+                <td>{{ meet.position }}</td>
+            </tr>
+            <tr>
+                <th>Created</th>
+                <td>{{ meet.created ? meet.created|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Updated</th>
+                <td>{{ meet.updated ? meet.updated|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('meet_index') }}">back to list</a>
+
+    <a href="{{ path('meet_edit', {'id': meet.id}) }}">edit</a>
+
+    {{ include('meet/_delete_form.html.twig') }}
+{% endblock %}

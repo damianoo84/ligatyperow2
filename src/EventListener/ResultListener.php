@@ -7,8 +7,7 @@ use App\Entity\Meet;
 
 class ResultListener {
     
-    public function postUpdate(LifecycleEventArgs $args)
-    {
+    public function postUpdate(LifecycleEventArgs $args) {
         $entity = $args->getEntity();
         $em = $args->getEntityManager();
         
@@ -17,24 +16,24 @@ class ResultListener {
             $typeRepo = $em->getRepository(Type::class);
             $types = $typeRepo->findByMeet($meetId);
             
-            foreach ($types as $type){
-                if(($type->getHostType() == $entity->getHostGoals()) && ($type->getGuestType() == $entity->getGuestGoals())){
+            foreach ($types as $type) {
+                if (($type->getHostType() == $entity->getHostGoals()) && ($type->getGuestType() == $entity->getGuestGoals())){
                         $type->setNumberOfPoints(4);
-                }elseif(
+                } elseif (
                             // typ1 > typ2 i wynik1 > wynik2
                             ($type->getHostType() > $type->getGuestType()) && 
                             ($entity->getHostGoals() > $entity->getGuestGoals()) 
                         )
                     {
                         $type->setNumberOfPoints(2);
-                }elseif(
+                } elseif (
                             // typ1 < typ2 i wynik1 < wynik2
                             ($type->getHostType() < $type->getGuestType()) && 
                             ($entity->getHostGoals() < $entity->getGuestGoals())
                         )
                     {
                         $type->setNumberOfPoints(2);
-                }elseif(
+                } elseif (
                             // typ1 == typ2 i wynik1 == wynik2 i typ1 <> wynik1
                             ($type->getHostType() == $type->getGuestType()) && 
                             ($entity->getHostGoals() == $entity->getGuestGoals()) && 
@@ -42,7 +41,7 @@ class ResultListener {
                         )
                     {
                         $type->setNumberOfPoints(2);
-                }else{
+                } else {
                         $type->setNumberOfPoints(0);
                 }
                 

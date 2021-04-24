@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Meet index{% endblock %}
+
+{% block content %}
+    <h1>Meet index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>HostGoals</th>
+                <th>GuestGoals</th>
+                <th>Term</th>
+                <th>Position</th>
+                <th>Created</th>
+                <th>Updated</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for meet in meets %}
+            <tr>
+                <td>{{ meet.id }}</td>
+                <td>{{ meet.name }}</td>
+                <td>{{ meet.hostGoals }}</td>
+                <td>{{ meet.guestGoals }}</td>
+                <td>{{ meet.term }}</td>
+                <td>{{ meet.position }}</td>
+                <td>{{ meet.created ? meet.created|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ meet.updated ? meet.updated|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('meet_show', {'id': meet.id}) }}">show</a>
+                    <a href="{{ path('meet_edit', {'id': meet.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('meet_new') }}">Create new</a>
+{% endblock %}

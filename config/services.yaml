@@ -26,13 +26,11 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-    activity_listener:
-        class: %activity_listener.class%
-        arguments: [@security.context, @doctrine.orm.entity_manager]
-        tags:
-            - { name: kernel.event_listener, event: kernel.controller, method: onCoreController }
+#    App\EventListener\ActivityListener:
+#        arguments: [@security.context, @doctrine.orm.entity_manager]
+#        tags:
+#            - { name: kernel.event_listener, event: kernel.controller, method: onCoreController }
 
-    result_listener:
-        class: App\EventListener\ResultListener
+    App\EventListener\ResultListener:
         tags:
             - { name: doctrine.event_listener, event: postUpdate }
