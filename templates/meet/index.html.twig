@@ -12,6 +12,7 @@
                 <th>Name</th>
                 <th>HostGoals</th>
                 <th>GuestGoals</th>
+                <th>Matchday</th>
                 <th>Term</th>
                 <th>Position</th>
                 <th>Created</th>
@@ -26,6 +27,7 @@
                 <td>{{ meet.name }}</td>
                 <td>{{ meet.hostGoals }}</td>
                 <td>{{ meet.guestGoals }}</td>
+                <td>{{ meet.matchday.name }}</td>
                 <td>{{ meet.term }}</td>
                 <td>{{ meet.position }}</td>
                 <td>{{ meet.created ? meet.created|date('Y-m-d H:i:s') : '' }}</td>
