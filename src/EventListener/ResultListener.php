@@ -4,6 +4,7 @@ namespace App\EventListener;
 
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use App\Entity\Meet;
+use App\Entity\Type;
 
 class ResultListener {
     
