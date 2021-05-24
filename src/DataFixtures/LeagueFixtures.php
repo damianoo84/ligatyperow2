@@ -10,7 +10,7 @@ use App\Entity\League;
 class LeagueFixtures extends Fixture implements OrderedFixtureInterface{
 
     public function getOrder() {
-        return 1;
+        return 0;
     }
     
     public function load(ObjectManager $manager) {

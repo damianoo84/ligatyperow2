@@ -30,6 +30,12 @@ class Team
     private $shortname;
 
     /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\League", inversedBy="teams")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $league;
+
+    /**
      * @var \DateTime $created
      *
      * @Gedmo\Timestampable(on="create")
@@ -92,4 +98,22 @@ class Team
     {
         return (string)$this->name;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getLeague()
+    {
+        return $this->league;
+    }
+
+    /**
+     * @param mixed $league
+     */
+    public function setLeague($league): void
+    {
+        $this->league = $league;
+    }
+
+
 }

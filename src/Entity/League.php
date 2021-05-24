@@ -30,6 +30,11 @@ class League
     private $meets;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Team", mappedBy="league")
+     */
+    private $teams;
+
+    /**
      * @var \DateTime $created
      *
      * @Gedmo\Timestampable(on="create")
@@ -116,4 +121,22 @@ class League
     {
         return $this->name;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getTeams()
+    {
+        return $this->teams;
+    }
+
+    /**
+     * @param mixed $teams
+     */
+    public function setTeams($teams): void
+    {
+        $this->teams = $teams;
+    }
+
+
 }
