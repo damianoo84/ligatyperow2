@@ -29,5 +29,5 @@ security:
 
     access_control:
         - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY}
-#        - { path: ^/, roles: ROLE_USER}
+        - { path: ^/, roles: ROLE_USER}
         - { path: ^/admin-panel, roles: ROLE_SUPER_ADMIN }
