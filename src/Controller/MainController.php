@@ -26,8 +26,7 @@ class MainController extends AbstractController{
      * )
      * @Template()
      */
-    public function indexAction(){
-        
+    public function indexAction(LoggerInterface $logger){
         return array();
     }
 
