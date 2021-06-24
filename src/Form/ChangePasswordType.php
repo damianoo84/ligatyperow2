@@ -2,46 +2,28 @@
 
 namespace App\Form;
 
+use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
-
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ChangePasswordType extends AbstractType {
-    
-    public function getName() {
-        return 'changePassword';
-    }
-    
+
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
-            ->add('currentPassword', 'password', array(
-                'label' => 'Aktualne hasło',
-                'mapped' => false,
-                'constraints' => array(
-                    new UserPassword(array(
-                        'message' => 'Podano błędne aktualne hasło użytkownika'
-                    ))
-                )
-            ))
-            ->add('plainPassword', 'repeated', array(
-                'type' => 'password',
-                'first_options' => array(
-                    'label' => 'Nowe hasło'
-                ),
-                'second_options' => array(
-                    'label' => 'Powtórz hasło'
-                )
-            ))
-            ->add('submit', 'submit', array(
-                'label' => 'Zmień hasło'
+            ->add('password', RepeatedType::class, array(
+                'type' => PasswordType::class,
+                'first_options' => array('label' => 'New Password'),
+                'second_options' => array('label' => 'Repeat New Password')
             ));
     }
-    
-    public function setDefaultOptions(\Symfony\Component\OptionsResolver\OptionsResolverInterface $resolver) {
+
+    public function configureOptions(OptionsResolver $resolver)
+    {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\User',
-            'validation_groups' => array('Default', 'ChangePassword')
+            'data_class' => User::class
         ));
     }
 

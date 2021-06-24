@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    {{ form_start(form) }}
+
+    {{ form_label(form.password.first) }}
+    {{ form_widget(form.password.first) }}
+
+    {{ form_label(form.password.second) }}
+    {{ form_widget(form.password.second) }}
+
+    <input type="submit" value="Submit">
+
+    {{ form_end(form) }}
+    
+{% endblock %}

@@ -2,10 +2,12 @@
 
 namespace App\Controller;
 
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use App\Entity\Type;
+use App\Entity\User;
 use App\Entity\Comment;
 use App\Entity\Season;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -16,6 +18,7 @@ use Psr\Log\LoggerInterface;
 use App\Service\TypeService;
 use App\Service\HistoryService;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class MainController extends AbstractController{
 
@@ -240,42 +243,38 @@ class MainController extends AbstractController{
      *      "/konto",
      *      name = "liga_typerow_account"
      * )
-     * 
      * @Template()
      */
-    public function accountSettingsAction(Request $Request, LoggerInterface $logger)
+    public function accountSettingsAction(Request $request, LoggerInterface $logger, UserPasswordEncoderInterface $passwordEncoder)
     {
         $logger->info('this is the account action');
-        $User = $this->getUser();
-        
-        // Change Password
-        $changePasswdForm = $this->createForm(new ChangePasswordType(), $User);
-        
-        if($Request->isMethod('POST') && $Request->request->has('changePassword')){
-            $changePasswdForm->handleRequest($Request);
-            
-            if($changePasswdForm->isValid()){
-                
-                try {
-                    $userManager = $this->get('user_manager');
-                    $userManager->changePassword($User);
 
-                    $this->get('session')->getFlashBag()->add('success', 'Twoje hasło zostało zmienione!');
-                    return $this->redirect($this->generateUrl('liga_typerow_account'));
-                    
-                } catch (UserException $ex) {
-                    $this->get('session')->getFlashBag()->add('error', $ex->getMessage());
-                }
-                
-            }else{
-                $this->get('session')->getFlashBag()->add('error', 'Popraw błędy formularza2!');
-            }
+        $user  = $this->getUser();
+
+        $form = $this->createForm(ChangePasswordType::class, $user);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            // encode the plain password
+            $user->setPassword(
+                $passwordEncoder->encodePassword(
+                    $user,
+                    $form->get('password')->getData()
+                )
+            );
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($user);
+            $entityManager->flush();
+
+            $this->addFlash('success', "Password reset successfully");
+            return $this->redirect($this->generateUrl('liga_typerow_account'));
         }
-        
-        
+
         return array(
-            'user' => $User,
-            'changePasswdForm' => $changePasswdForm->createView()
+            'user' => $user,
+            'form' => $form->createView(),
         );
     }
     
