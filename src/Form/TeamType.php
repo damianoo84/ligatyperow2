@@ -22,7 +22,6 @@ class TeamType extends AbstractType
                      'class' => League::class,
                      'label' => 'Liga'
             ]);
-        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

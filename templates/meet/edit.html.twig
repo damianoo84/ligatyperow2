@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Meet{% endblock %}
+{% block title %}Aktualizacja{% endblock %}
 
 {% block content %}
-    <h1>Edit Meet</h1>
+    <h1>Aktualizacja</h1>
 
-    {{ include('meet/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('meet/_form.html.twig', {'button_label': 'Aktualizuj'}) }}
 
-    <a href="{{ path('meet_index') }}">back to list</a>
+    <a href="{{ path('meet_index') }}">Powrót do listy</a>
 
     {{ include('meet/_delete_form.html.twig') }}
 {% endblock %}
