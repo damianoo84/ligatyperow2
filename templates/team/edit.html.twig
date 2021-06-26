@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Team{% endblock %}
+{% block title %}Edycja{% endblock %}
 
 {% block content %}
-    <h1>Edit Team</h1>
+    <h1>Edycja</h1>
 
-    {{ include('team/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('team/_form.html.twig', {'button_label': 'Aktualizacja'}) }}
 
-    <a href="{{ path('team_index') }}">back to list</a>
+    <a href="{{ path('team_index') }}">Powrót do listy</a>
 
     {{ include('team/_delete_form.html.twig') }}
 {% endblock %}

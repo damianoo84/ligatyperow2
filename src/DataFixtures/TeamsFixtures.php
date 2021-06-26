@@ -329,137 +329,137 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
             array(
                 'team_name' => 'Niemcy',
                 'shortname' => 'NIE',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Hiszpania',
                 'shortname' => 'HIS',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Holandia',
                 'shortname' => 'HOL',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Anglia',
                 'shortname' => 'ANG',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Włochy',
                 'shortname' => 'WŁO',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Argentyna',
                 'shortname' => 'ARG',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Rosja',
                 'shortname' => 'ROS',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Brazylia',
                 'shortname' => 'BRA',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Turcja',
                 'shortname' => 'TUR',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Irlandia',
                 'shortname' => 'IRL',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Polska',
                 'shortname' => 'POL',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Nigeria',
                 'shortname' => 'NIG',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Austria',
                 'shortname' => 'AUS',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Słowenia',
                 'shortname' => 'SŁO',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Francja',
                 'shortname' => 'FRA',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Kolumbia',
                 'shortname' => 'KOL',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Meksyk',
                 'shortname' => 'MEK',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Islandia',
                 'shortname' => 'ISL',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Szwecja',
                 'shortname' => 'SZW',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Chile',
                 'shortname' => 'CHI',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Ukraina',
                 'shortname' => 'UKR',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Portugalia',
                 'shortname' => 'PO',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Belgia',
                 'shortname' => 'BEL',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Szwajcaria',
                 'shortname' => 'SZR',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Słowacja',
                 'shortname' => 'SŁW',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Czechy',
                 'shortname' => 'CZE',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Szkocja',
                 'shortname' => 'SZK',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'West Ham United',
@@ -469,17 +469,17 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
             array(
                 'team_name' => 'Urugwaj',
                 'shortname' => 'URU',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Serbia',
                 'shortname' => 'SER',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Czarnogóra',
                 'shortname' => 'CZA',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Saint Etienne',
@@ -504,22 +504,22 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
             array(
                 'team_name' => 'Węgry',
                 'shortname' => 'WGR',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Japonia',
                 'shortname' => 'JAP',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Bułgaria',
                 'shortname' => 'BUL',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Rumunia',
                 'shortname' => 'RUM',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Eintracht Frankfurt',
@@ -564,57 +564,57 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
             array(
                 'team_name' => 'Paragwaj',
                 'shortname' => 'PAG',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Chorwacja',
                 'shortname' => 'CHO',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Łotwa',
                 'shortname' => 'ŁOT',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Izrael',
                 'shortname' => 'IZR',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Dania',
                 'shortname' => 'DAN',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Irlandia Płn.',
                 'shortname' => 'IRP',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Kosowo',
                 'shortname' => 'KOS',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Grecja',
                 'shortname' => 'GRE',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Bośnia i H.',
                 'shortname' => 'BOS',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Peru',
                 'shortname' => 'PER',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Norwegia',
                 'shortname' => 'NOR',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Cagliari Calcio',

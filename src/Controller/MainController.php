@@ -268,7 +268,8 @@ class MainController extends AbstractController{
             $entityManager->persist($user);
             $entityManager->flush();
 
-            $this->addFlash('success', "Password reset successfully");
+//            $this->addFlash('success', "Password reset successfully");
+            $this->get('session')->getFlashBag()->add('success', 'Twoje hasło zostało zmienione!');
             return $this->redirect($this->generateUrl('liga_typerow_account'));
         }
 
