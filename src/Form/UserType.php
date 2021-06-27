@@ -12,21 +12,17 @@ class UserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email')
-            ->add('roles')
-            ->add('password')
-            ->add('phone')
-            ->add('numberOfWins')
-            ->add('status')
-            ->add('priority')
-            ->add('lastActivityAt')
-            ->add('rankingPosition')
-            ->add('maxPointsPerQueue')
-            ->add('minPointsPerQueue')
-            ->add('created')
-            ->add('updated')
-            ->add('username')
-            ->add('shortname')
+            ->add('username' , null, ['label' => 'Imię'])
+            ->add('shortname' , null, ['label' => 'Skrót'])
+            ->add('email' , null, ['label' => 'Email'])
+            ->add('password' , null, ['label' => 'Hasło'])
+            ->add('phone' , null, ['label' => 'Telefon'])
+            ->add('numberOfWins' , null, ['label' => 'Ilość wygranych'])
+            ->add('status' , null, ['label' => 'Status'])
+            ->add('priority' , null, ['label' => 'Priorytet'])
+            ->add('rankingPosition' , null, ['label' => 'Pozycja w rankingu'])
+            ->add('maxPointsPerQueue' , null, ['label' => 'Maksymalna liczba punktów na kolejkę'])
+            ->add('minPointsPerQueue' , null, ['label' => 'Minimalna liczba punktów na kolejkę'])
         ;
     }
 

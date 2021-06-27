@@ -1,54 +1,44 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}User index{% endblock %}
+{% block title %}Lisa użytkowników{% endblock %}
 
-{% block body %}
-    <h1>User index</h1>
+{% block content %}
+    <h1>Lista użytkowników</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Imię</th>
+                <th>Skrót</th>
                 <th>Email</th>
-                <th>Roles</th>
-                <th>Password</th>
-                <th>Phone</th>
-                <th>NumberOfWins</th>
+                <th>Telefon</th>
+                <th>Ilość wygranych</th>
                 <th>Status</th>
-                <th>Priority</th>
-                <th>LastActivityAt</th>
-                <th>RankingPosition</th>
-                <th>MaxPointsPerQueue</th>
-                <th>MinPointsPerQueue</th>
-                <th>Created</th>
-                <th>Updated</th>
-                <th>Username</th>
-                <th>Shortname</th>
-                <th>actions</th>
+                <th>Priorytet</th>
+                <th>Pozycja w rankingu</th>
+                <th>Najwięcej punktów na kolejkę</th>
+                <th>Najmniej punktów na kolejkę</th>
+                <th>Akcje</th>
             </tr>
         </thead>
         <tbody>
         {% for user in users %}
             <tr>
                 <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.shortname }}</td>
                 <td>{{ user.email }}</td>
-                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-                <td>{{ user.password }}</td>
                 <td>{{ user.phone }}</td>
                 <td>{{ user.numberOfWins }}</td>
                 <td>{{ user.status }}</td>
                 <td>{{ user.priority }}</td>
-                <td>{{ user.lastActivityAt ? user.lastActivityAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ user.rankingPosition }}</td>
                 <td>{{ user.maxPointsPerQueue }}</td>
                 <td>{{ user.minPointsPerQueue }}</td>
-                <td>{{ user.created ? user.created|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ user.updated ? user.updated|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ user.username }}</td>
-                <td>{{ user.shortname }}</td>
                 <td>
-                    <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
-                    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+                    <a href="{{ path('user_show', {'id': user.id}) }}">Szczegóły</a>
+                    <a href="{{ path('user_edit', {'id': user.id}) }}">Aktualizacja</a>
                 </td>
             </tr>
         {% else %}
@@ -59,5 +49,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('user_new') }}">Create new</a>
+    <a href="{{ path('user_new') }}">Dodaj nowego użytkownika</a>
 {% endblock %}

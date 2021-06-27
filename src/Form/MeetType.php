@@ -15,21 +15,21 @@ class MeetType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('hostGoals')
-            ->add('guestGoals')
-            ->add('term')
-            ->add('position')
-            ->add('hostTeam')
+            ->add('name' , null, ['label' => 'Nazwa'])
+            ->add('hostGoals' , null, ['label' => 'Bramki gospodarz'])
+            ->add('guestGoals' , null, ['label' => 'Bramki gość'])
+            ->add('term' , null, ['label' => 'Termin meczu'])
+            ->add('position' , null, ['label' => 'Pozycja meczu'])
+            ->add('hostTeam' , null, ['label' => 'Gospodarz'])
 //            ->add('hostTeam', null, [
 //                'query_builder' => function (EntityRepository $er) {
 //                    return $er->createQueryBuilder('u')
 //                        ->orderBy('u.name', 'ASC');
 //                },])
-            ->add('guestTeam')
+            ->add('guestTeam' , null, ['label' => 'Gość'])
             ->add('matchday', EntityType::class, [
                 'class' => Matchday::class,
-                'label' => 'kolejka'
+                'label' => 'Kolejka'
             ])
             ->add('league', EntityType::class, [
                 'class' => League::class,
