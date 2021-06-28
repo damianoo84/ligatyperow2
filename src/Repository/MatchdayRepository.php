@@ -20,7 +20,7 @@ class MatchdayRepository extends ServiceEntityRepository
     }
 
     // pobranie obecnej kolejki
-    public function getMatchday(){
+    public function getMatchday() {
         $today = new \DateTime('now');
         $qb = $this->createQueryBuilder('m');
         $qb->select('m.id AS id'
@@ -41,6 +41,33 @@ class MatchdayRepository extends ServiceEntityRepository
 
         return $result;
     }
+
+    public function getPreviuosMatchday() {
+
+        $today = new \DateTime('now');
+        $qb = $this->createQueryBuilder('m');
+        $qb->select('m.id AS id'
+            ,'m.name AS name'
+            ,'m.dateFrom AS dateFrom'
+            ,'m.dateTo AS dateTo'
+            ,'s.id AS season_id'
+        )
+            ->innerJoin('m.season', 's')
+            ->where('m.dateFrom > :today')
+            ->setMaxResults(1)
+            ->setParameter('today', $today->format('Y-m-d H:i:s'))
+        ;
+
+        $result = $qb->getQuery()->getOneOrNullResult();
+
+//        exit(\Doctrine\Common\Util\Debug::dump($result));
+
+        return $result;
+
+
+
+    }
+
 
     // /**
     //  * @return Matchday[] Returns an array of Matchday objects

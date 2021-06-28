@@ -34,6 +34,7 @@ class AppExtension extends AbstractExtension{
             new TwigFunction('sum_comments', array($this, 'getSumComments')),
             new TwigFunction('get_season', array($this, 'getSeasonId')),
             new TwigFunction('get_season_name', array($this, 'getSeasonName')),
+            new TwigFunction('prev_matchday', array($this, 'getPreviousMatchday'))
         );
 
     }
@@ -51,7 +52,22 @@ class AppExtension extends AbstractExtension{
         
         return $matchday;
     }
-    
+
+    public function getPreviousMatchday() {
+
+        $repository = $this->doctrine->getRepository((Matchday::class));
+        $matchday = $repository->getPreviuosMatchday();
+
+        if($matchday == NULL){
+            $matchday['id'] = 15;
+            $matchday['name'] = 15;
+            $matchday['finish'] = "finish";
+        }
+
+        return $matchday;
+
+    }
+
     // get matchday by name
     public function getMatchdayByName($name){
         $repository = $this->doctrine->getRepository(Matchday::class);
