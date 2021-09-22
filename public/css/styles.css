@@ -24,6 +24,30 @@ body{
     background-color: white;
 }
 
+div.username{
+    width: 25%;
+    background-color: white;
+    float: left;
+}
+
+div.typeweek{
+    width: 25%;
+    background-color: white;
+    float: left;
+}
+
+div.matchweek{
+    width: 25%;
+    background-color: white;
+    float: left;
+}
+
+div.empty{
+    width: 25%;
+    background-color: white;
+    float: left;
+}
+
 #menu_03{
     z-index: 4;
     background-color:black;
@@ -303,6 +327,14 @@ td.table_loop{
 td.table_username{
     text-align: left;
     width: 15%;
+    height: 60px;
+}
+
+div.table_username_div{
+    width: 50%;
+    height: 30px;
+    float:left;
+    background-color: red;
 }
 
 td.table_pkt{
@@ -437,10 +469,16 @@ a:visited.type_matchday_big_screen{
     th.th_rank_total,th.th_rank_win,td.table_pkt, 
     td.team_name,td.team_name_2,img.img1,
     div.div_change_pass_box,th.team_score,td.team_score,
-    th.th_table_pkt,th.team_user,th.team_matchday,p.p_log_user,p.queque_number,td.type_type,td.user_type_2{
+    th.th_table_pkt,th.team_user,th.team_matchday,p.p_log_user,
+    p.queque_number,td.type_type,td.user_type_2,
+    div.typeweek,div.empty,div.username{
         display: none;
     }
-    
+
+    div.matchweek{
+        width: 100%;
+    }
+
     td.team_shortname,th.team_user_shortname, th.team_matchday_short,
     td.team_name_short_2,td.team_name_short,td.user_type_short,
     td.type_type_short, th.type_guest, th.type_host{

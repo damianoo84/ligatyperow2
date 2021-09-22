@@ -167,7 +167,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'role' => 'ROLE_USER'
             ),
             array(
-                'nick' => 'Kuba',
+                'nick' => 'Kuba1',
                 'shortname' => 'KB',
                 'email' => 'test13@test.pl',
                 'password' => 'psw546',
@@ -243,6 +243,50 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'phone' => '501167408',
                 'role' => 'ROLE_USER'
             ),
+            array(
+                'nick' => 'Adrian',
+                'shortname' => 'AD',
+                'email' => 'test20@test.pl',
+                'password' => 'cd333',
+                'numberofwins' => 0,
+                'status' => 1,
+                'priority' => 20,
+                'phone' => '604115331',
+                'role' => 'ROLE_USER'
+            ),
+            array(
+                'nick' => 'Kamil',
+                'shortname' => 'KA',
+                'email' => 'test21@test.pl',
+                'password' => 'fgdgfgd',
+                'numberofwins' => 0,
+                'status' => 1,
+                'priority' => 21,
+                'phone' => '537844037',
+                'role' => 'ROLE_USER'
+            ),
+            array(
+                'nick' => 'Kuba2',
+                'shortname' => 'K2',
+                'email' => 'test22@test.pl',
+                'password' => 'fgdgfgd',
+                'numberofwins' => 0,
+                'status' => 1,
+                'priority' => 22,
+                'phone' => '501652282',
+                'role' => 'ROLE_USER'
+            ),
+            array(
+                'nick' => 'Piotrek4',
+                'shortname' => 'P4',
+                'email' => 'test23test.pl',
+                'password' => 'fgdgfgd',
+                'numberofwins' => 0,
+                'status' => 1,
+                'priority' => 23,
+                'phone' => '508438311',
+                'role' => 'ROLE_USER'
+            )
         );
 
         foreach ($usersList as $userDetails) {

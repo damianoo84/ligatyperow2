@@ -725,6 +725,36 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
                 'team_name' => 'Standard Liege',
                 'shortname' => 'STA',
                 'league' => 'Liga Belgijska'
+            ),
+            array(
+                'team_name' => 'RC Lens',
+                'shortname' => 'RCL',
+                'league' => 'Liga Francuska'
+            ),
+            array(
+                'team_name' => 'Dinamo Zagrzeb',
+                'shortname' => 'ZAG',
+                'league' => 'Liga Chorwacka'
+            ),
+            array(
+                'team_name' => 'Zenit Sankt Petersburg',
+                'shortname' => 'ZEN',
+                'league' => 'Liga Rosyjska'
+            ),
+            array(
+                'team_name' => 'Lokomotiw Moskwa',
+                'shortname' => 'LOK',
+                'league' => 'Liga Rosyjska'
+            ),
+            array(
+                'team_name' => 'Aston Villa Birmingham',
+                'shortname' => 'AST',
+                'league' => 'Liga Angielska'
+            ),
+            array(
+                'team_name' => 'Spartak Moskwa',
+                'shortname' => 'SPA',
+                'league' => 'Liga Rosyjska'
             )
 
         );

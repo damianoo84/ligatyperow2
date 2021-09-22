@@ -6,33 +6,27 @@
 
     <div style="display: table-cell;vertical-align: middle;">
 
-        <div style="margin-left: 20px;margin-right: auto;width: 400px;background-color: white">
+        <div style="background-color: transparent;">
 
             <form method="post">
                 {% if error %}
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
 
-{#                {% if app.user %}#}
-{#                    <div class="mb-3">#}
-{#                        You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>#}
-{#                    </div>#}
-{#                {% endif %}#}
-
-                <label for="inputUsername">Użytkownik</label>
-                <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" required autofocus>
-                <br />
-                <label for="inputPassword">Hasło</label>
-                <input type="password" name="password" id="inputPassword" class="form-control" required>
-
-                <input type="hidden" name="_csrf_token"
-                       value="{{ csrf_token('authenticate') }}"
-                >
-                <br />
-                <button class="btn btn-lg btn-primary" type="submit">
-                    Zaloguj się
-                </button>
-
+                <table>
+                    <tr>
+                        <td><label for="inputUsername">Użytkownik</label></td>
+                        <td><input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" required autofocus></td>
+                    </tr>
+                    <tr>
+                        <td><label for="inputPassword">Hasło</label></td>
+                        <td><input type="password" name="password" id="inputPassword" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"></td>
+                        <td><button class="btn btn-lg btn-primary" type="submit">Zaloguj się</button></td>
+                    </tr>
+                </table>
 
             </form>
 

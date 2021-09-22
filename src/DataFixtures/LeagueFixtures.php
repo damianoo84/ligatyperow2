@@ -31,6 +31,7 @@ class LeagueFixtures extends Fixture implements OrderedFixtureInterface{
             'Liga Portugalska',
             'Liga Rosyjska',
             'Liga Ukraińska',
+            'Liga Chorwacka',
             'el. Mistrzostw Świata',
             'el. Mistrzostw Europy',
             'Mecz towarzyski',
