@@ -18,19 +18,19 @@ class MatchdaysFixtures extends Fixture implements OrderedFixtureInterface{
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2021-09-13',
-                'dateTo' => '2021-09-19',
+                'dateFrom' => '2021-09-27',
+                'dateTo' => '2021-09-28',
                 'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '2',
-                'dateFrom' => '2021-09-20',
-                'dateTo' => '2021-09-26',
+                'dateFrom' => '2021-09-29',
+                'dateTo' => '2021-09-30',
                 'season_name' => 'Jesień 2021'
             ),
             array(
                 'matchday_name' => '3',
-                'dateFrom' => '2021-09-27',
+                'dateFrom' => '2021-10-01',
                 'dateTo' => '2021-10-03',
                 'season_name' => 'Jesień 2021'
             ),

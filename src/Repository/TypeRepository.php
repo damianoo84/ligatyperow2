@@ -186,7 +186,9 @@ class TypeRepository extends ServiceEntityRepository
                         ." - "
                         .(null!==$meet->getGuestGoals()?$meet->getGuestGoals():" ");
 
-                    $hostGuest = $shortNames.' | '.$names.$score;
+                    # sklejenie krótkiej nazwy meczu, terminu, spotkania, wyniku
+                    $hostGuest = $shortNames.$meet->getTerm().' | '.$names.' | '.$score;
+
                     $matrix[$hostGuest][$user->getUsername()] = '-';
                 }
             }
@@ -202,7 +204,9 @@ class TypeRepository extends ServiceEntityRepository
                         ." - "
                         .(null!==$type['guestGoals']?$type['guestGoals']:" ");
 
-                    $hostGuest = $names.' | '.$shortNames.$score;
+                    # sklejenie krótkiej nazwy meczu, terminu, spotkania, wyniku
+                    $hostGuest = $names.$type['term'].' | '.$shortNames.' | '.$score;
+
                     $matrix[$hostGuest][$type['username']] = $type['hostType'] . ' - ' . $type['guestType'];
                 }
             }
