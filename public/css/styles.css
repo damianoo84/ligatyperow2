@@ -296,6 +296,32 @@ tr.tab_types_row_2 {
     height: 50px;
 }
 
+/* 2 pkt */
+div.type_type_div1{
+    width: 100%;
+    /*color: red;*/
+    font-weight: bolder;
+    background-color: yellow;
+}
+
+/* 4 pkt */
+div.type_type_div3{
+    width: 100%;
+    /*color: blue;*/
+    font-weight: bolder;
+    background-color: springgreen;
+}
+
+div.type_type_div2{
+    width: 100%;
+    text-align: right;
+    font-size: x-small;
+}
+
+div.type_type_div4{
+    width: 100%;
+}
+
 th {
     background: #333;
     color: white;

@@ -207,7 +207,9 @@ class TypeRepository extends ServiceEntityRepository
                     # sklejenie krótkiej nazwy meczu, terminu, spotkania, wyniku
                     $hostGuest = $names.$type['term'].' | '.$shortNames.' | '.$score;
 
-                    $matrix[$hostGuest][$type['username']] = $type['hostType'] . ' - ' . $type['guestType'];
+                    $isPoints = ($type['numberOfPoints'] == NULL) ? "" : $type['numberOfPoints'];
+
+                    $matrix[$hostGuest][$type['username']] = $type['hostType'] . ' - ' . $type['guestType'].' '.$isPoints;
                 }
             }
         }

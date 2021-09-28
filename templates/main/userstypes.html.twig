@@ -27,16 +27,30 @@
                     </td>
 
                     <td class="team_name_short_2">{{ key[:7] }}</td>
-                    <td class="team_score">{{ key|slice((key|length)-5,5) }}</td>
+
+                    <td class="team_score">
+                        <div class="team_score_2_div_1">{{ key|slice((key|length)-5,5) }}</div>
+                        <div class="team_score_2_div_1"></div>
+                    </td>
+
                     {% for k,tp in type %}
                         {% if nextMatchday == true and tp != '-' %}
                             <td class="type_type">*</td>
                             <td class="type_type_short">*</td>
                         {% else %}
-                            <td class="type_type">{{ tp }}</td> 
-                            <td class="type_type_short">{{ tp }}</td> 
+                            <td class="type_type">
+                                {% if tp[5:] == 2 %}
+                                    <div class="type_type_div1">{{ tp[:5] }}</div>
+                                {% elseif tp[5:] == 4 %}
+                                    <div class="type_type_div3">{{ tp[:5] }}</div>
+                                {% else %}
+                                    <div class="type_type_div4">{{ tp[:5] }}</div>
+                                {% endif %}
+                                <div class="type_type_div2">{{ tp[5:] }}</div>
+                            </td>
+                            <td class="type_type_short">{{ tp[:5] }}</td>
                         {% endif %}
-                    {% endfor %} 
+                    {% endfor %}
                 </tr>
             {% endfor %}  
         </table>
