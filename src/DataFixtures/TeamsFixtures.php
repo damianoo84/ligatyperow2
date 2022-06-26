@@ -755,8 +755,32 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
                 'team_name' => 'Spartak Moskwa',
                 'shortname' => 'SPA',
                 'league' => 'Liga Rosyjska'
+            ),
+            array(
+                'team_name' => 'Kanada',
+                'shortname' => 'KAN',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Walia',
+                'shortname' => 'WAL',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Finlandia',
+                'shortname' => 'FIN',
+                'league' => 'Mecz towarzyski'
+            ),
+            array(
+                'team_name' => 'Bodo Glimt',
+                'shortname' => 'BOD',
+                'league' => 'Liga Norweska'
+            ),
+            array(
+                'team_name' => 'Stade de Reims',
+                'shortname' => 'REI',
+                'league' => 'Liga Francuska'
             )
-
         );
 
         foreach ($teamsList as $teamsDetails) {

@@ -46,7 +46,8 @@ class LeagueFixtures extends Fixture implements OrderedFixtureInterface{
             'Puchar Polski',
             'Liga Narodów',
             'Liga Belgijska',
-            'Reprezentacja'
+            'Reprezentacja',
+            'Liga Norweska'
         );
         
         $i = 1;

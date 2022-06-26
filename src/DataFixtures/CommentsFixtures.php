@@ -28,7 +28,7 @@ class CommentsFixtures extends Fixture implements OrderedFixtureInterface {
             ),
             array(
                 'text' => 'cos tam cos tam cos tam 3',
-                'nick' => 'Marcin',
+                'nick' => 'Marcin1',
                 'season_name' => 'Wiosna 2018'
             )
             
