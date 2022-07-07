@@ -3,7 +3,7 @@
 namespace App\EventListener;
 
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
-use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
+use Symfony\Component\HttpKernel\Event\ControllerEvent;
 use Symfony\Component\HttpKernel\HttpKernel;
 use Doctrine\ORM\EntityManager;
 use App\Entity\User;
@@ -26,7 +26,7 @@ class ActivityListener
     * Update the user "lastActivity" on each request
     * @param FilterControllerEvent $event
     */
-    public function onCoreController(FilterControllerEvent $event)
+    public function onCoreController(ControllerEvent $event)
     {
         // Check that the current request is a "MASTER_REQUEST"
         // Ignore any sub-request
