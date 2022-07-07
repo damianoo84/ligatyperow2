@@ -27,7 +27,7 @@ class MeetsFixtures extends Fixture implements OrderedFixtureInterface {
             ),
             array(
                 'meet_name' => 'Mecz 2',
-                'team_name_1' => 'VfB Stuttgart',
+                'team_name_1' => 'VFB Stuttgart',
                 'team_name_2' => 'RB Lipsk',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Niemiecka',
@@ -46,7 +46,7 @@ class MeetsFixtures extends Fixture implements OrderedFixtureInterface {
             array(
                 'meet_name' => 'Mecz 4',
                 'team_name_1' => 'VFL Wolfsburg',
-                'team_name_2' => 'Werder Bremen',
+                'team_name_2' => 'Werder Brema',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Niemiecka',
                 'term' => 'Sobota,06-08-2022,18:30',
