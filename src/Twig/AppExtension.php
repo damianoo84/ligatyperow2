@@ -11,14 +11,17 @@ use App\Entity\Meet;
 use App\Entity\Comment;
 use App\Entity\Type;
 use App\Entity\Season;
+use Psr\Log\LoggerInterface;
 
 class AppExtension extends AbstractExtension{
     
     protected $doctrine;
+    private $logger;
 
-    public function __construct(ManagerRegistry $doctrine)
+    public function __construct(ManagerRegistry $doctrine, LoggerInterface $logger)
     {
         $this->doctrine = $doctrine;
+        $this->logger = $logger;
     }
 
     public function getFunctions()
@@ -105,9 +108,14 @@ class AppExtension extends AbstractExtension{
     
     // get current logged users
     public function usersLogged(){
+
+        $this->logger->info('DC get current logged users');
+
         $repository = $this->doctrine->getRepository(User::class);
         $users = $repository->getActive();
-        
+
+        $this->logger->info('DC $users: ' . $users);
+
         return $users;
     }
     

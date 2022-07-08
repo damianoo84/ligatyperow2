@@ -7,6 +7,7 @@ use App\Entity\User;
 use App\Entity\Meet;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Psr\Log\LoggerInterface;
 
 /**
  * @method Type|null find($id, $lockMode = null, $lockVersion = null)
@@ -16,9 +17,12 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class TypeRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
+    private $loggger;
+
+    public function __construct(ManagerRegistry $registry, LoggerInterface $logger)
     {
         parent::__construct($registry, Type::class);
+        $this->loggger = $logger;
     }
 
     // Pobranie sumy punktów każdego użytkownika dla każdej kolejki
@@ -259,6 +263,8 @@ class TypeRepository extends ServiceEntityRepository
         // Pobieram wszystkich aktywnych użytkowników
         $userRepo = $this->getEntityManager()->getRepository(User::class);
         $users = $userRepo->findByStatus(1);
+
+        $this->logger->info('DC $users: ' . $users);
 
         $phones = array();
 
