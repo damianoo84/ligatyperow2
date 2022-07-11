@@ -21,6 +21,17 @@ class User implements UserInterface
     private $id;
 
     /**
+     * @ORM\Column(type="string", length=20)
+     */
+    private $username;
+
+    /**
+     *
+     * @ORM\Column(type="string", length=20 , unique = true)
+     */
+    private $shortname;
+
+    /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
     private $email;
@@ -107,16 +118,7 @@ class User implements UserInterface
      */
     private $updated;
 
-    /**
-     * @ORM\Column(type="string", length=20)
-     */
-    private $username;
 
-    /**
-     *
-     * @ORM\Column(type="string", length=20 , unique = true)
-     */
-    private $shortname;
 
     public function setShortname($shortname)
     {
@@ -420,4 +422,15 @@ class User implements UserInterface
 
         return $this;
     }
+
+    /**
+     * @return Bool Whether the user is active or not
+     */
+    public function isActiveNow()
+    {
+        // Delay during wich the user will be considered as still active
+        $delay = new \DateTime('2 minutes ago');
+        return ( $this->getLastActivityAt() > $delay );
+    }
+
 }

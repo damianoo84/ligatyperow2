@@ -114,7 +114,11 @@ class AppExtension extends AbstractExtension{
         $repository = $this->doctrine->getRepository(User::class);
         $users = $repository->getActive();
 
-        $this->logger->info('DC $users: ' . $users);
+        $this->logger->info('DC count $users: ' . count($users));
+
+        foreach ($users as $key => $value) {
+            $this->logger->info('DC $users , key: ' . $key);
+        }
 
         return $users;
     }

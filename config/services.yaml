@@ -26,10 +26,12 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-#    App\EventListener\ActivityListener:
-#        arguments: [@security.context, @doctrine.orm.entity_manager]
-#        tags:
-#            - { name: kernel.event_listener, event: kernel.controller, method: onCoreController }
+    App\EventListener\ActivityListener:
+        arguments:
+        - '@security.token_storage'
+        - '@doctrine.orm.entity_manager'
+        tags:
+            - { name: 'kernel.event_listener', event: 'kernel.controller', method: 'onCoreController' }
 
     App\EventListener\ResultListener:
         tags:
