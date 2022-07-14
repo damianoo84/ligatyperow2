@@ -49,9 +49,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'nick' => 'Wojtek',
                 'shortname' => 'W',
                 'email' => 'test2@test.pl',
-                'password' => 'hsajdksdh',
+                'password' => '$2a$12$RqwQmBxfZxJGnXWGc4G57uLL8.qTl1gyAX9mw1kg4P.ekEKOqwGyW',
                 'numberofwins' => 3,
-                'status' => 0,
+                'status' => 1,
                 'priority' => 2,
                 'phone' => '887033022',
                 'role' => 'ROLE_USER'
@@ -60,9 +60,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'nick' => 'Mateusz',
                 'shortname' => 'MT',
                 'email' => 'test3@test.pl',
-                'password' => 'dsjakdjslkd',
+                'password' => '$2a$12$RqwQmBxfZxJGnXWGc4G57uLL8.qTl1gyAX9mw1kg4P.ekEKOqwGyW',
                 'numberofwins' => 0,
-                'status' => 0,
+                'status' => 1,
                 'priority' => 3,
                 'phone' => '730310189',
                 'role' => 'ROLE_USER'
@@ -73,7 +73,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test4@test.pl',
                 'password' => 'psw326',
                 'numberofwins' => 3,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 4,
                 'phone' => '881737984',
                 'role' => 'ROLE_USER'
@@ -84,7 +84,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test5@test.pl',
                 'password' => 'psw874',
                 'numberofwins' => 1,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 5,
                 'phone' => '796818505',
                 'role' => 'ROLE_USER'
@@ -95,7 +95,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test6@test.pl',
                 'password' => 'psw905',
                 'numberofwins' => 3,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 6,
                 'phone' => '508294223',
                 'role' => 'ROLE_USER'
@@ -172,7 +172,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test13@test.pl',
                 'password' => 'psw546',
                 'numberofwins' => 3,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 13,
                 'phone' => '514649985',
                 'role' => 'ROLE_USER'
@@ -183,7 +183,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test14@test.pl',
                 'password' => 'psw214',
                 'numberofwins' => 2,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 14,
                 'phone' => '517496559',
                 'role' => 'ROLE_USER'
@@ -205,7 +205,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test16@test.pl',
                 'password' => 'psw219',
                 'numberofwins' => 2,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 16,
                 'phone' => '509011637',
                 'role' => 'ROLE_USER'
@@ -216,7 +216,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test17@test.pl',
                 'password' => 'psw572',
                 'numberofwins' => 2,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 17,
                 'phone' => '692075286',
                 'role' => 'ROLE_USER'
@@ -227,7 +227,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test18@test.pl',
                 'password' => 'psw465',
                 'numberofwins' => 0,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 18,
                 'phone' => '609414775',
                 'role' => 'ROLE_USER'
@@ -238,7 +238,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test19@test.pl',
                 'password' => 'psw843',
                 'numberofwins' => 0,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 19,
                 'phone' => '501167408',
                 'role' => 'ROLE_USER'
@@ -249,7 +249,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test20@test.pl',
                 'password' => 'cd333',
                 'numberofwins' => 0,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 20,
                 'phone' => '604115331',
                 'role' => 'ROLE_USER'
@@ -260,7 +260,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test21@test.pl',
                 'password' => 'fgdgfgd',
                 'numberofwins' => 0,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 21,
                 'phone' => '537844037',
                 'role' => 'ROLE_USER'
@@ -271,7 +271,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test22@test.pl',
                 'password' => 'fgdgfgd',
                 'numberofwins' => 0,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 22,
                 'phone' => '501652282',
                 'role' => 'ROLE_USER'
@@ -282,7 +282,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test23test.pl',
                 'password' => 'fgdgfgd',
                 'numberofwins' => 0,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 23,
                 'phone' => '508438311',
                 'role' => 'ROLE_USER'
@@ -293,7 +293,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test24test.pl',
                 'password' => 'fgdgfsssagd',
                 'numberofwins' => 0,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 24,
                 'phone' => '607173821',
                 'role' => 'ROLE_USER'
@@ -304,7 +304,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test25test.pl',
                 'password' => 'fgdgfsssasagd',
                 'numberofwins' => 0,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 25,
                 'phone' => '502903704',
                 'role' => 'ROLE_USER'
@@ -315,7 +315,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'email' => 'test26test.pl',
                 'password' => 'fgdgwwagd',
                 'numberofwins' => 1,
-                'status' => 1,
+                'status' => 0,
                 'priority' => 26,
                 'phone' => '573266025',
                 'role' => 'ROLE_USER'
