@@ -17,12 +17,12 @@ use Psr\Log\LoggerInterface;
  */
 class TypeRepository extends ServiceEntityRepository
 {
-    private $loggger;
+    private $logger;
 
     public function __construct(ManagerRegistry $registry, LoggerInterface $logger)
     {
         parent::__construct($registry, Type::class);
-        $this->loggger = $logger;
+        $this->logger = $logger;
     }
 
     // Pobranie sumy punktów każdego użytkownika dla każdej kolejki
