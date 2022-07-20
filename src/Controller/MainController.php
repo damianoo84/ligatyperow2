@@ -160,9 +160,11 @@ class MainController extends AbstractController{
             'Jeżeli w meczu dojdzie do dogrywki lub rzutów karnych to liczy się '
             . 'wynik meczu regulaminowych 90 minut.',
             'Jeżeli mecz niezostanie rozegrany w danej kolejce lub przerwany (i nie dokończony) '
-            . 'lub zostanie uznany jako walkower, wtedy typy na ten mecz zostają anulowane.',
+            . 'lub zostanie uznany jako walkower, albo ja pomylę się (podam spotkanie nie z tej kolejki, '
+            . 'zdubluję spotkanie lub podam złego gospodarza meczu) wtedy typy na ten mecz zostają anulowane. ',
             'Jeżeli zwycięzcą po 15 kolejkach okażą się dwie lub więcej osób, '
-            . 'które będą miały taką samą ilość punktów to zostanie przeprowadzona dogrywka między nimi.'
+            . 'które będą miały taką samą ilość punktów to nie robimy dogrywki, każda z tych osób zajmie '
+            .'ex aequo 1 miejsce i każda dostanie nagrodę w postaci zgrzewki wybranego przez siebie piwa.'
         );
         
         return array('principles' => $principles);
