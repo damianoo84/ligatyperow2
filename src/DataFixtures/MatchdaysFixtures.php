@@ -18,13 +18,13 @@ class MatchdaysFixtures extends Fixture implements OrderedFixtureInterface{
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2022-07-15',
-                'dateTo' => '2022-07-17',
+                'dateFrom' => '2022-07-21',
+                'dateTo' => '2022-07-23',
                 'season_name' => 'Jesień 2022'
             ),
             array(
                 'matchday_name' => '2',
-                'dateFrom' => '2022-07-18',
+                'dateFrom' => '2022-07-24',
                 'dateTo' => '2022-08-14',
                 'season_name' => 'Jesień 2022'
             ),
