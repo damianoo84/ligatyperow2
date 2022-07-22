@@ -9,11 +9,12 @@
     {% endif %}
 
     {% if types is not empty %}
-        <table class="tab_types">
+        <table class="tab_types3">
             <tr class="type_header">
                 <th class="team_matchday">Mecze/Gracze</th>
                 <th class="team_matchday_short">M/G</th>
                 <th class="team_score">wynik</th>
+                <th class="team_score_short"></th>
                 {% for user in get_users() %}
                 <th class="team_user">{{ user.username }}</th>
                 <th class="team_user_shortname">{{ user.shortname[:1] }}</th>
@@ -21,7 +22,7 @@
             </tr>
             {% for key,type in types %}
                 <tr class="tab_types_row_2">
-                    <td class="team_name_2">
+                    <td class="team_name">
                         <div class="team_name_2_div_1">{{ (key|split('|')[1]) }}</div>
                         <div class="team_name_2_div_2">{{ (key|split('|')[0])[7:] }}</div>
                     </td>
@@ -52,7 +53,31 @@
                         {% endif %}
                     {% endfor %}
                 </tr>
-            {% endfor %}  
+            {% endfor %}
+        </table>
+
+        <table class="tab_types2">
+            {% for key,type in types %}
+                <tr style="width: 100%;">
+                    <td>
+                        <div>{{ (key|split('|')[1]) }}</div>
+                        <div>{{ (key|split('|')[0])[7:] }}</div>
+                    </td>
+                    <td>
+                        <div class="team_score_2_div_1">{{ key|slice((key|length)-5,5) }}</div>
+                    </td>
+                </tr>
+                {% for k,tp in type %}
+                    <tr style="width: 100%;">
+                        <td>{{ k }}</td>
+                    {% if nextMatchday == true and tp != '-' %}
+                        <td class="type_type_short">*</td>
+                    {% else %}
+                        <td class="type_type_short">{{ tp[:5] }}</td>
+                    {% endif %}
+                    </tr>
+                {% endfor %}
+            {% endfor %}
         </table>
     {% endif %}
     
