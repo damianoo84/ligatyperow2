@@ -2,6 +2,9 @@
 
 {% block content %}
 
+    <div style="height:20px;width:100%;float:left"></div>
+    <div style="width:50%;float:left"></div>
+    <div style="width:50%;float:left">
     {{ form_start(form) }}
 
     {{ form_label(form.password.first) }}
@@ -10,8 +13,10 @@
     {{ form_label(form.password.second) }}
     {{ form_widget(form.password.second) }}
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Zmień">
 
     {{ form_end(form) }}
+    
+    </div>
     
 {% endblock %}

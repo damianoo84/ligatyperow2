@@ -53,7 +53,7 @@ class MatchdayRepository extends ServiceEntityRepository
             ,'s.id AS season_id'
         )
             ->innerJoin('m.season', 's')
-            ->where('m.dateFrom > :today')
+            ->where('m.dateFrom < :today')
             ->setMaxResults(1)
             ->setParameter('today', $today->format('Y-m-d H:i:s'))
         ;
