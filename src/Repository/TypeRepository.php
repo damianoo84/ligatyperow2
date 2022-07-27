@@ -151,7 +151,9 @@ class TypeRepository extends ServiceEntityRepository
             .'t.guest_type AS guestType,  '
             .'m.matchday_id, '
             .'m.host_goals AS hostGoals, '
-            .'m.guest_goals AS guestGoals '
+            .'m.guest_goals AS guestGoals, '
+            .'m.term AS term, '
+            .'t.number_of_points AS numberOfPoints '
             .'FROM user u  '
             .'INNER JOIN type t ON t.user_id = u.id  '
             .'INNER JOIN meet m ON t.meet_id = m.id '
@@ -166,14 +168,20 @@ class TypeRepository extends ServiceEntityRepository
         $params = array('matchday' => $matchday);
         $usersTypes = $this->getEntityManager()->getConnection()->executeQuery($sql, $params)->fetchAll();
 
+//         exit(\Doctrine\Common\Util\Debug::dump($usersTypes));
+        
         // 2. Pobieram mecze w danej kolejce
         $meetRepo = $this->getEntityManager()->getRepository(Meet::class);
         $meets = $meetRepo->findByMatchday($matchday);
 
+//        exit(\Doctrine\Common\Util\Debug::dump($meets));
+        
         // 3. Pobieram wszystkich aktywnych użytkowników
         $userRepo = $this->getEntityManager()->getRepository(User::class);
         $users = $userRepo->findByStatus(1);
 
+//        exit(\Doctrine\Common\Util\Debug::dump($users));
+        
         $matrix = array();
 
         // jeśli zaplanowane już są jakieś mecze to:
@@ -197,6 +205,8 @@ class TypeRepository extends ServiceEntityRepository
                 }
             }
 
+//                    exit(\Doctrine\Common\Util\Debug::dump($matrix));
+            
             // 5. Wypełnienie macierzy typami
             foreach ($usersTypes as $type){
                 if($type['matchday_id'] == $matchday){
