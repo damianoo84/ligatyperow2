@@ -32,7 +32,7 @@ class CommentRepository extends ServiceEntityRepository
             ->innerJoin('c.user', 'u')
             ->where('s.id = :season')
             ->setParameter('season', $season)
-            ->orderBy('c.created','DESC')
+            ->orderBy('c.id','DESC')
         ;
 
         $result = $qb->getQuery()->getResult();

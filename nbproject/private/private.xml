@@ -4,15 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/ligatyperow2/src/Service/TypeService.php</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/src/DataFixtures/MeetsFixtures.php</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/src/Twig/AppExtension.php</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/src/DataFixtures/UsersFixtures.php</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/src/Repository/MatchdayRepository.php</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/src/Repository/TypeRepository.php</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/src/DataFixtures/CommentsFixtures.php</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/templates/base.html.twig</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/templates/main/userstypes.html.twig</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/src/DataFixtures/MatchdaysFixtures.php</file>
+            <file>file:/C:/xampp/htdocs/ligatyperow2/.env</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/src/Controller/MainController.php</file>
         </group>
     </open-files>
