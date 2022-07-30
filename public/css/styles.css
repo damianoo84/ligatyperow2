@@ -566,3 +566,7 @@ table.tab_types3 {
     width: 100%;
     /*border-collapse: collapse;*/
 }
+
+th.team_user,th.team_user_shortname,th.team_matchday,th.team_matchday_short, th.team_score {
+    font-size: xx-small;
+}
