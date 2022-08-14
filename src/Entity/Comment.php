@@ -101,5 +101,13 @@ class Comment
         return $this;
     }
 
+    public function setCreated(\DateTime $created): void {
+        $this->created = $created;
+    }
+
+    public function setUpdated(\DateTime $updated): void {
+        $this->updated = $updated;
+    }
+
 
 }

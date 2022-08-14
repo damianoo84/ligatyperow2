@@ -220,9 +220,12 @@ class MainController extends AbstractController{
                 
                 $season = $repoSeason->findOneById($request->request->get('season_id'));
                 
+                $date = date('m/d/Y h:i:s a', time());
+                
                 $comment = new Comment();
                 $comment->setUser($this->getUser());
                 $comment->setSeason($season);
+                $comment->setCreated(new \DateTime("now"));
                 $comment->setText(
                             htmlspecialchars(
                             stripslashes(
