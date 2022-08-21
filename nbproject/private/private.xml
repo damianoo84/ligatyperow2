@@ -5,7 +5,6 @@
         <group>
             <file>file:/C:/xampp/htdocs/ligatyperow2/src/Entity/Comment.php</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/src/DataFixtures/UsersFixtures.php</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/src/Repository/CommentRepository.php</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/templates/base.html.twig</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/templates/main/forum.html.twig</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/public/css/styles.css</file>
