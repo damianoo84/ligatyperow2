@@ -10,6 +10,8 @@
             <tr>
                 <th>Id</th>
                 <th>Nazwa</th>
+                <th>HostTeam</th>
+                <th>GuestTeam</th>
                 <th>Gole gospodarz</th>
                 <th>Gole gość</th>
                 <th>Kolejka</th>
@@ -25,6 +27,8 @@
             <tr>
                 <td>{{ meet.id }}</td>
                 <td>{{ meet.name }}</td>
+                <td>{{ meet.hostTeam}}</td>
+                <td>{{ meet.guestTeam}}</td>
                 <td>{{ meet.hostGoals }}</td>
                 <td>{{ meet.guestGoals }}</td>
                 <td>{{ meet.matchday.name }}</td>
