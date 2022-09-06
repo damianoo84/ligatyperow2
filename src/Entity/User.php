@@ -103,6 +103,36 @@ class User implements UserInterface
     private $minPointsPerQueue;
 
     /**
+     * @ORM\Column(type="string", length=20,  nullable=true)
+     */
+    private $nick;
+    
+    /**
+     * @ORM\Column(type="string", length=20,  nullable=true)
+    */
+    private $favoritePolandTeam;
+    
+    /**
+     * @ORM\Column(type="string", length=20,  nullable=true)
+    */
+    private $favoriteForeignTeam;
+    
+    /**
+     * @ORM\Column(type="integer",  nullable=true)
+    */
+    private $numberOfFirstPlaces;
+    
+    /**
+     * @ORM\Column(type="integer",  nullable=true)
+     */
+    private $numberOfSecondPlaces;
+    
+    /**
+     * @ORM\Column(type="integer",  nullable=true)
+    */
+    private $numberOfThirdPlaces;
+
+    /**
      * @var \DateTime $created
      *
      * @Gedmo\Timestampable(on="create")
@@ -432,5 +462,55 @@ class User implements UserInterface
         $delay = new \DateTime('2 minutes ago');
         return ( $this->getLastActivityAt() > $delay );
     }
+    
+    public function getNick() {
+        return $this->nick;
+    }
+
+    public function setNick($nick): void {
+        $this->nick = $nick;
+    }
+
+    public function getFavoritePolandTeam() {
+        return $this->favoritePolandTeam;
+    }
+
+    public function getFavoriteForeignTeam() {
+        return $this->favoriteForeignTeam;
+    }
+
+    public function getNumberOfFirstPlaces() {
+        return $this->numberOfFirstPlaces;
+    }
+
+    public function getNumberOfSecondPlaces() {
+        return $this->numberOfSecondPlaces;
+    }
+
+    public function getNumberOfThirdPlaces() {
+        return $this->numberOfThirdPlaces;
+    }
+
+    public function setFavoritePolandTeam($favoritePolandTeam): void {
+        $this->favoritePolandTeam = $favoritePolandTeam;
+    }
+
+    public function setFavoriteForeignTeam($favoriteForeignTeam): void {
+        $this->favoriteForeignTeam = $favoriteForeignTeam;
+    }
+
+    public function setNumberOfFirstPlaces($numberOfFirstPlaces): void {
+        $this->numberOfFirstPlaces = $numberOfFirstPlaces;
+    }
+
+    public function setNumberOfSecondPlaces($numberOfSecondPlaces): void {
+        $this->numberOfSecondPlaces = $numberOfSecondPlaces;
+    }
+
+    public function setNumberOfThirdPlaces($numberOfThirdPlaces): void {
+        $this->numberOfThirdPlaces = $numberOfThirdPlaces;
+    }
+
+
 
 }
