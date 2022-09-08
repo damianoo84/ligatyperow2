@@ -13,13 +13,13 @@
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
 
-                <table>
+                <table style="background-color: green ;border-collapse:collapse;margin: 1%;">
                     <tr>
-                        <td><label for="inputUsername" style="color: black;font-weight: bold;">Użytkownik</label></td>
+                        <td><label for="inputUsername" style="color: white;">Użytkownik</label></td>
                         <td><input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" required autofocus></td>
                     </tr>
                     <tr>
-                        <td><label for="inputPassword" style="color: black;font-weight: bold;">Hasło</label></td>
+                        <td><label for="inputPassword" style="color: white;">Hasło</label></td>
                         <td><input type="password" name="password" id="inputPassword" class="form-control" required></td>
                     </tr>
                     <tr>
