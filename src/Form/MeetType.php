@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\League;
 use App\Entity\Matchday;
 use App\Entity\Meet;
+use App\Entity\Team;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -19,13 +20,22 @@ class MeetType extends AbstractType
             ->add('hostGoals' , null, ['label' => 'Bramki gospodarz'])
             ->add('guestGoals' , null, ['label' => 'Bramki gość'])
             ->add('term' , null, ['label' => 'Termin meczu'])
-            ->add('position' , null, ['label' => 'Pozycja meczu'])
+            ->add('position' , null, ['label' => 'Pozycja meczu']) 
             ->add('hostTeam' , null, ['label' => 'Gospodarz'])
-//            ->add('hostTeam', null, [
-//                'query_builder' => function (EntityRepository $er) {
-//                    return $er->createQueryBuilder('u')
-//                        ->orderBy('u.name', 'ASC');
-//                },])
+                
+                
+//                ->add('hostTeam', EntityType::class, [
+//                    'class' => Team::class,
+//                    'query_builder' => function (EntityRepository $er) {
+//                        return $er->createQueryBuilder('t')
+//                            ->innerJoin('t.league', 'l')
+//                            ->orderBy('l.id', 'ASC');
+//                    },
+//                    'label' => 'Gospodarz',
+//                ])
+                
+                
+                
             ->add('guestTeam' , null, ['label' => 'Gość'])
             ->add('matchday', EntityType::class, [
                 'class' => Matchday::class,
