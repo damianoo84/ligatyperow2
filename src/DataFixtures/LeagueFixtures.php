@@ -32,22 +32,22 @@ class LeagueFixtures extends Fixture implements OrderedFixtureInterface{
             'Liga Rosyjska',
             'Liga Ukraińska',
             'Liga Chorwacka',
-            'el. Mistrzostw Świata',
-            'el. Mistrzostw Europy',
-            'Mecz towarzyski',
-            'Klubowe Mistrzostwa Świata',
+            'Liga Belgijska',
+            'Liga Norweska',
             'Puchar Anglii',
             'Puchar Włoch',
             'Puchar Hiszpanii',
             'Puchar Niemiec',
             'Puchar Francji',
+            'Puchar Polski',
             'Puchar Ligi Angielskiej',
             'Puchar Ligi Francuskiej',
-            'Puchar Polski',
+            'el. Mistrzostw Świata',
+            'el. Mistrzostw Europy',
+            'Mecz towarzyski',
+            'Klubowe Mistrzostwa Świata',
             'Liga Narodów',
-            'Liga Belgijska',
-            'Reprezentacja',
-            'Liga Norweska'
+            'Reprezentacja'
         );
         
         $i = 1;

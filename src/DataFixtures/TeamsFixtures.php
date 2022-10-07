@@ -759,17 +759,17 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
             array(
                 'team_name' => 'Kanada',
                 'shortname' => 'KAN',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Walia',
                 'shortname' => 'WAL',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Finlandia',
                 'shortname' => 'FIN',
-                'league' => 'Mecz towarzyski'
+                'league' => 'Reprezentacja'
             ),
             array(
                 'team_name' => 'Bodo Glimt',
