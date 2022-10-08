@@ -50,9 +50,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'nick' => 'Damian',
                 'favoritepolandteam' => 'GKS Katowice',
                 'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1                 
+                'numberoffirstplaces' => 0,
+                'numberofsecondplaces' => 3,
+                'numberofthirdplaces' => 3                 
             ),
             array(
                 'username' => 'Wojtek',
@@ -68,10 +68,10 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Wojtek',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 3,
+                'numberofsecondplaces' => 2,
                 'numberofthirdplaces' => 1    
             ),
             array(
@@ -88,11 +88,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Mateusz',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1     
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
+                'numberofsecondplaces' => 0,
+                'numberofthirdplaces' => 3     
             ),
             array(
                 'username' => 'Marcin1',
@@ -108,10 +108,10 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Marcin1',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 3,
+                'numberofsecondplaces' => 0,
                 'numberofthirdplaces' => 1     
             ),
             array(
@@ -128,11 +128,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Krystian',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1    
+                'numberofsecondplaces' => 2,
+                'numberofthirdplaces' => 3    
             ),
             array(
                 'username' => 'Piotrek1',
@@ -148,11 +148,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Piotrek1',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1    
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 3,
+                'numberofsecondplaces' => 4,
+                'numberofthirdplaces' => 4    
             ),
             array(
                 'username' => 'Tomek',
@@ -168,11 +168,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Tomek',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1      
+                'numberofthirdplaces' => 0      
             ),
             array(
                 'username' => 'Michał',
@@ -188,10 +188,10 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Michał',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
+                'numberofsecondplaces' => 0,
                 'numberofthirdplaces' => 1    
             ),
             array(
@@ -208,11 +208,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Adam1',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1     
+                'numberofthirdplaces' => 0     
             ),
             array(
                 'username' => 'Przemek1',
@@ -228,11 +228,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Przemek1',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1   
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
+                'numberofsecondplaces' => 0,
+                'numberofthirdplaces' => 0   
             ),
             array(
                 'username' => 'Łukasz1',
@@ -248,11 +248,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Łukasz1',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1    
+                'numberofsecondplaces' => 3,
+                'numberofthirdplaces' => 0    
             ),
             array(
                 'username' => 'Piotrek2',
@@ -268,11 +268,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Piotrek2',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1    
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
+                'numberofsecondplaces' => 0,
+                'numberofthirdplaces' => 0    
             ),
             array(
                 'username' => 'Kuba1',
@@ -288,11 +288,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Kuba1',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1    
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 3,
+                'numberofsecondplaces' => 2,
+                'numberofthirdplaces' => 0    
             ),
             array(
                 'username' => 'Przemek2',
@@ -308,11 +308,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Przemek2',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1   
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 2,
+                'numberofsecondplaces' => 3,
+                'numberofthirdplaces' => 0   
             ),
             array(
                 'username' => 'Adam2',
@@ -328,11 +328,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Adam2',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1    
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
+                'numberofsecondplaces' => 0,
+                'numberofthirdplaces' => 0    
             ),
             array(
                 'username' => 'Piotrek3',
@@ -348,11 +348,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Piotrek3',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1   
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 2,
+                'numberofsecondplaces' => 4,
+                'numberofthirdplaces' => 3   
             ),
             array(
                 'username' => 'Arek',
@@ -368,11 +368,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Arek',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1   
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 2,
+                'numberofsecondplaces' => 2,
+                'numberofthirdplaces' => 3   
             ),
             array(
                 'username' => 'Zbyszek',
@@ -388,11 +388,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Zbyszek',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1    
+                'numberofsecondplaces' => 0,
+                'numberofthirdplaces' => 0    
             ),
             array(
                 'username' => 'Robert',
@@ -408,11 +408,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Robert',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1    
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
+                'numberofsecondplaces' => 0,
+                'numberofthirdplaces' => 0    
             ),
             array(
                 'username' => 'Adrian',
@@ -428,11 +428,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Adrian',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1    
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
+                'numberofsecondplaces' => 0,
+                'numberofthirdplaces' => 0    
             ),
             array(
                 'username' => 'Kamil',
@@ -448,11 +448,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Kamil',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1   
+                'numberofthirdplaces' => 0   
             ),
             array(
                 'username' => 'Kuba2',
@@ -468,11 +468,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Kuba2',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1   
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
+                'numberofsecondplaces' => 0,
+                'numberofthirdplaces' => 0   
             ),
             array(
                 'username' => 'Piotrek4',
@@ -488,11 +488,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Piotrek4',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1  
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
+                'numberofsecondplaces' => 0,
+                'numberofthirdplaces' => 0  
             ),
             array(
                 'username' => 'Łukasz2',
@@ -508,11 +508,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Łukasz2',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1      
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
+                'numberofsecondplaces' => 0,
+                'numberofthirdplaces' => 0      
             ),
             array(
                 'username' => 'Marcin2',
@@ -528,11 +528,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Marcin2',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
-                'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1    
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
+                'numberoffirstplaces' => 0,
+                'numberofsecondplaces' => 0,
+                'numberofthirdplaces' => 0    
             ),
             array(
                 'username' => 'Grzegorz',
@@ -548,11 +548,11 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'minpointsperqueue' => 0,
                 'maxpointsperqueue' => 28,
                 'nick' => 'Grzegorz',
-                'favoritepolandteam' => 'GKS Katowice',
-                'favoriteforeignteam' => 'FC Barcelona',
+                'favoritepolandteam' => 'myteam',
+                'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 1,
-                'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 1    
+                'numberofsecondplaces' => 0,
+                'numberofthirdplaces' => 0    
             )
 
         );
