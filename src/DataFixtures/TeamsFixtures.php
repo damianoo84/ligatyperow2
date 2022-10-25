@@ -322,7 +322,7 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
                 'league' => 'Liga Szkocka'
             ),
             array(
-                'team_name' => 'Celtic GLasgow',
+                'team_name' => 'Celtic Glasgow',
                 'shortname' => 'CEL',
                 'league' => 'Liga Szkocka'
             ),
