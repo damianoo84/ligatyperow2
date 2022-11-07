@@ -7,8 +7,11 @@
             <file>file:/C:/xampp/htdocs/ligatyperow2/src/DataFixtures/UsersFixtures.php</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/src/DataFixtures/TeamsFixtures.php</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/composer.json</file>
+            <file>file:/C:/xampp/htdocs/ligatyperow2/src/Entity/Meet.php</file>
+            <file>file:/C:/xampp/htdocs/ligatyperow2/templates/meet/new.html.twig</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/src/Entity/User.php</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/src/Form/Enum/MeetName.php</file>
+            <file>file:/C:/xampp/htdocs/ligatyperow2/templates/meet/index.html.twig</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/templates/base.html.twig</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/config/services.yaml</file>
         </group>
