@@ -72,7 +72,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 3,
                 'numberofsecondplaces' => 2,
-                'numberofthirdplaces' => 1    
+                'numberofthirdplaces' => 2    
             ),
             array(
                 'username' => 'Mateusz',
@@ -291,7 +291,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoritepolandteam' => 'myteam',
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 3,
-                'numberofsecondplaces' => 2,
+                'numberofsecondplaces' => 3,
                 'numberofthirdplaces' => 0    
             ),
             array(
@@ -339,7 +339,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'shortname' => 'P3',
                 'email' => 'test16@test.pl',
                 'password' => 'psw219',
-                'numberofwins' => 2,
+                'numberofwins' => 3,
                 'status' => 1,
                 'priority' => 16,
                 'phone' => '509011637',
@@ -350,7 +350,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'nick' => 'Piotrek3',
                 'favoritepolandteam' => 'myteam',
                 'favoriteforeignteam' => 'myteam',
-                'numberoffirstplaces' => 2,
+                'numberoffirstplaces' => 3,
                 'numberofsecondplaces' => 4,
                 'numberofthirdplaces' => 3   
             ),
