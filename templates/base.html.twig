@@ -30,7 +30,7 @@
 <div id="info_02">
     {% block info %}
         {% if curr_matchday().finish is defined %}
-             Finał Ligi Typerów
+             Nowy sezon ligi typerów już wkrótce
         {% else %}
             <div class="username">{% if app.user %}Zalogowany: {{ app.user.username }} {% endif %} </div>
             <div class="matchweek">Kolejka {{ curr_matchday().name }}/15 | {{ curr_matchday().dateFrom|date('d.m.Y') }} - {{ curr_matchday().dateTo|date('d.m.Y') }} </div>
