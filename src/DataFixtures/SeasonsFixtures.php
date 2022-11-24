@@ -153,6 +153,12 @@ class SeasonsFixtures extends Fixture implements OrderedFixtureInterface {
                 'dateStart' => '2022-08-01',
                 'dateEnd' => '2022-11-20',
                 'active' => true
+            ),
+            array(
+                'season_name' => 'Wiosna 2023',
+                'dateStart' => '2023-02-13',
+                'dateEnd' => '2023-06-04',
+                'active' => true
             )
         );
         

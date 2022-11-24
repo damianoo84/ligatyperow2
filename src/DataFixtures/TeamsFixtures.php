@@ -785,6 +785,11 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
                 'team_name' => 'AJ Auxerre',
                 'shortname' => 'AUX',
                 'league' => 'Liga Francuska'
+            ),
+            array(
+                'team_name' => 'SV Salzburg',
+                'shortname' => 'SAL',
+                'league' => 'Liga Austriacka'
             )
         );
 
