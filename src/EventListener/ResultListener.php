@@ -29,8 +29,8 @@ class ResultListener {
             foreach ($types as $type) {
                 
                     if (
-                            ($type->getHostType() == $entity->getHostGoals()) && 
-                            ($type->getGuestType() == $entity->getGuestGoals())
+                            ($type->getHostType() == intval($entity->getHostGoals())) && 
+                            ($type->getGuestType() == intval($entity->getGuestGoals()))
                         )
                     {
                         $this->logger->info('Update set 4 points');
@@ -51,45 +51,18 @@ class ResultListener {
                     {
                         $this->logger->info('Update set 2 points (option 2)');
                         $type->setNumberOfPoints(2);
-                    } elseif (
+                    } 
+                    elseif (
                                 // typ1 == typ2 i wynik1 == wynik2 i typ1 <> wynik1
                                 ($type->getHostType() == $type->getGuestType()) && 
                                 ($entity->getHostGoals() == $entity->getGuestGoals()) && 
-                                ($type->getHostType() <> $entity->getHostGoals())
-                             )
+                                ($type->getHostType() <> $entity->getHostGoals()) && 
+                                ((string) $entity->getHostGoals() != null && (string) $entity->getGuestGoals() != null)
+                           )
                     {
-                        $this->logger->info('$type->getHostType(): ' . $type->getHostType());
-                        $this->logger->info('$type->getGuestType(): ' . $type->getGuestType());
-                        $this->logger->info('$entity->getHostGoals(): ' . $entity->getHostGoals());
-                        $this->logger->info('$entity->getGuestGoals(): ' . $entity->getGuestGoals());
                         $this->logger->info('Update set 2 points (option 3)');
-                        
-                        if ($entity->getHostGoals() == '') {
-                            $this->logger->info('test1'); // tak
-                        }
-                        
-                        if ($entity->getHostGoals() == NULL) {
-                            $this->logger->info('test2'); // tak
-                        }
-                        
-                        if ($entity->getHostGoals() == "") {
-                            $this->logger->info('test3'); // tak
-                        }
-                        
-                        if ($entity->getHostGoals() == ' ') {
-                            $this->logger->info('test4');
-                        }
-                        
-                        if ($entity->getHostGoals() == " ") {
-                            $this->logger->info('test5');
-                        } 
-                        
-                        if (empty($entity->getHostGoals())) {
-                            $this->logger->info('test6'); // tak
-                        }
-                        
                         $type->setNumberOfPoints(2);     
-                    } elseif (
+                    }  elseif (
                                 // typ 2-1 wynik 0-0
                                 // typ 2-1 wynik 1-2
                                 // typ 1-1 wynik 2-1
@@ -125,8 +98,14 @@ class ResultListener {
                     {
                         $this->logger->info('Update set 0 points');
                         $type->setNumberOfPoints(0);
-                    } else {
+                    } elseif (
+                                $entity->getHostGoals() == null || 
+                                $entity->getGuestGoals() == null
+                             ) 
+                    {
                         $this->logger->info('NO UPDATE!');
+                    } else {
+                        $this->logger->info('NO UPDATE - other');
                     }
 
                     $em->persist($type);
