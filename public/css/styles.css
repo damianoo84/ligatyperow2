@@ -25,19 +25,13 @@ body{
 }
 
 div.username{
-    width: 25%;
-    background-color: white;
-    float: left;
-}
-
-div.typeweek{
-    width: 25%;
+    width: 30%;
     background-color: white;
     float: left;
 }
 
 div.matchweek{
-    width: 25%;
+    width: 40%;
     background-color: white;
     float: left;
 }
@@ -48,7 +42,7 @@ div.matchweek_small{
 }
 
 div.empty{
-    width: 25%;
+    width: 30%;
     background-color: white;
     float: left;
 }
@@ -524,8 +518,18 @@ a:visited.type_matchday_big_screen{
     td.rank_seasons,td.rank_queue,td.rank_total,
     td.rank_match_2,td.rank_match_4,
     th.th_rank_seasons,th.th_rank_queue,
-    th.th_rank_match_2,th.th_rank_match_4,td.rank_win,
-    th.th_rank_total,th.th_rank_win,td.table_pkt,
+    th.th_rank_match_2,th.th_rank_match_4,
+    th.th_rank_total,th.th_rank_pkt,td.rank_ptk,
+    th.th_rank_eightplaces,th.th_rank_fiveplaces,
+    th.th_rank_fourthplaces,th.th_rank_nineplaces,
+    th.th_rank_others,
+    th.th_rank_seventhplaces, th.th_rank_sixthplaces,
+    th.th_rank_tenplaces,
+    td.rank_fiveplaces, td.rank_eightplaces,
+    td.rank_fourthplaces,td.rank_nineplaces,
+    td.rank_others, td.rank_seventhplaces,
+    td.rank_sixthplaces, td.rank_tenplaces,
+    td.table_pkt,
     td.team_name,td.team_name_2,img.img1,
     div.div_change_pass_box,
     th.th_table_pkt,p.p_log_user,p.queque_number,

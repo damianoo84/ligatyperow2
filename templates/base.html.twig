@@ -35,7 +35,6 @@
             <div class="username">{% if app.user %}Zalogowany: {{ app.user.username }} {% endif %} </div>
             <div class="matchweek">Kolejka {{ curr_matchday().name }}/15 | {{ curr_matchday().dateFrom|date('d.m.Y') }} - {{ curr_matchday().dateTo|date('d.m.Y') }} </div>
             <div class="matchweek_small">Kolejka {{ curr_matchday().name }}/15 | {{ curr_matchday().dateFrom|date('d.m.Y') }} - {{ curr_matchday().dateTo|date('d.m.Y') }} </div>
-            <div class="typeweek"></div>
             <div class="empty"></div>
         {% endif %}
     {% endblock %}
