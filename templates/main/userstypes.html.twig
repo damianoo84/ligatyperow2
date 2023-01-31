@@ -56,29 +56,52 @@
             {% endfor %}
         </table>
 
-        <table class="tab_types2">
-            {% for key,type in types %}
-                <tr style="width: 100%;">
-                    <td>
-                        <div>{{ (key|split('|')[1]) }}</div>
-                        <div>{{ (key|split('|')[0])[7:] }}</div>
-                    </td>
-                    <td>
-                        <div class="team_score_2_div_1">{{ key|slice((key|length)-5,5) }}</div>
+        <!-- tutaj ustawienie na komórkę -->
+        <div class="tab_types2">
+            
+            <table style="font-size: xx-small;float:left;width:auto;">
+                <tr style="padding:0;margin:0;">
+                    <td style="padding:0;margin:0;">
+                        <div style="height:50px;"><p style="writing-mode: vertical-rl;text-orientation: mixed;"></p></div>
                     </td>
                 </tr>
-                {% for k,tp in type %}
-                    <tr style="width: 100%;">
-                        <td>{{ k }}</td>
-                    {% if nextMatchday == true and tp != '-' %}
-                        <td class="type_type_short">*</td>
-                    {% else %}
-                        <td class="type_type_short">{{ tp[:5] }}</td>
-                    {% endif %}
+                {% for key,user in users %}
+                    <tr style="padding:0;margin:0;">
+                        <td style="padding:0;margin:0;text-align: left;">{{ user.username }}</td>
                     </tr>
                 {% endfor %}
+                    
+            </table>
+            
+            
+            {% for key,type in types %}
+                <table style="font-size: xx-small;float:left;width:auto;">
+                <tr style="padding:0;margin:0;">
+             {#       <td>
+                        <div class="team_score_2_div_1"></div>
+                    </td>#}
+                    <td style="padding:0;margin:0;">
+{#                        <div>{{ (key|split('|')[1]) }}</div>#}
+{#                        <div>{{ (key|split('|')[0])[7:] }}</div>#}
+                        <div style="height:50px;"><p style="writing-mode: vertical-rl;text-orientation: mixed;">{{ (key|split('|')[0])[:7] }}</p></div>
+                    </td>
+                </tr>
+                {#</tr>#}
+                {% for k,tp in type %}
+{#                    <tr style="width: 100%;">#}
+                    <tr style="padding:0;margin:0;">
+                    {% if nextMatchday == true and tp != '-' %}
+                        <td style="padding:0;margin:0;">*</td>
+                    {% else %}
+                        <td style="padding:0;margin:0;">{{ tp[:5] }}</td>
+                    {% endif %}
+{#                    <td>{{ k }}</td>#}
+                    </tr>
+                {% endfor %}
+                </table>
             {% endfor %}
-        </table>
+        </div>
+        
     {% endif %}
     
 {% endblock %}

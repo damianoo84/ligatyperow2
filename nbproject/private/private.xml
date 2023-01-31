@@ -3,12 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/src/Twig/AppExtension.php</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/src/Repository/TypeRepository.php</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/config/services.yaml</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/var/log/dev.log</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/src/EventListener/ResultListener.php</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/src/Controller/MainController.php</file>
+            <file>file:/C:/xampp/htdocs/ligatyperow2/templates/base.html.twig</file>
+            <file>file:/C:/xampp/htdocs/ligatyperow2/src/DataFixtures/MatchdaysFixtures.php</file>
+            <file>file:/C:/xampp/htdocs/ligatyperow2/templates/main/userstypes.html.twig</file>
+            <file>file:/C:/xampp/htdocs/ligatyperow2/public/css/styles.css</file>
         </group>
     </open-files>
 </project-private>

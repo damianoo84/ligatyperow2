@@ -17,6 +17,7 @@ use App\Twig\AppExtension;
 use Psr\Log\LoggerInterface;
 use App\Service\TypeService;
 use App\Service\HistoryService;
+use App\Service\UserService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
@@ -57,11 +58,12 @@ class MainController extends AbstractController{
      * )
      * @Template()
      */
-    public function userstypesAction(LoggerInterface $logger, Request $request, TypeService $typeService){
+    public function userstypesAction(LoggerInterface $logger, Request $request, TypeService $typeService, UserService $userService){
         
         $logger->info('this is the userstypes action');
         $types = $typeService->getUsersTypes($request);
-        return array('types' => $types);
+        $users = $userService->getActiveUsers();
+        return array('types' => $types, 'users' => $users);
     }
 
     /**
