@@ -45,9 +45,11 @@ class TypeRepository extends ServiceEntityRepository
         $usr = $userRepo->findByStatus(1);
 
         // tworze tablice gdzie kluczem jest id usera a wartoscia jego nazwa
+        // 04-02-2023 zmodyfikowałem tak żeby możliwe było dodane innych informacji o użytkowniku (np. pozycja w rankingu
         $users = array();
         foreach ($usr as $us){
-            $users[$us->getId()] = $us->getUsername();
+            $users[$us->getId()]['username'] = $us->getUsername();
+            $users[$us->getId()]['ranking'] = $us->getRankingPosition();
         }
 
         // iteruje po aktualnej liczbie kolejek
@@ -82,7 +84,8 @@ class TypeRepository extends ServiceEntityRepository
                 // dany user nie typowal w danej kolejce
                 // i w zwiazku z tym zapisuje pod jego imieniem sume punktow = 0
                 if (!$userTypeStatus) {
-                    $points_per_matchday[$key]['username'] = $value;
+                    $points_per_matchday[$key]['username'] = $value['username'];
+                    $points_per_matchday[$key]['ranking'] = $value['ranking'];
                     $points_per_matchday[$key]['suma'][] = 0;
                 }
 

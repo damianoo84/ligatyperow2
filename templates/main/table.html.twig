@@ -18,7 +18,14 @@
 
                 {% set sum = 0 %}
 
-                <td class="table_username">{{ point.username }}</td>
+                <td class="table_username">
+                    <div class="table_username_username">
+                        <span class="testbottom">{{ point.username }}</span>
+                    </div>
+                    <div class="table_username_ranking">
+                        Ranking: {{ point.ranking }}
+                    </div>
+                </td>
 
                     {% for pt in point.suma %}
                         <td class="table_pkt">
