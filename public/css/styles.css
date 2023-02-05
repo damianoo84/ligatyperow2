@@ -1,7 +1,23 @@
-body{
+body.main_body{
     position:relative;
     margin:0 auto;
     background-color: black;
+}
+
+table.login_table {
+    /*background-color: green ;*/
+    border-collapse:collapse;
+    margin: 1%;
+    text-align: left;
+}
+
+tr.login_tr {
+    background-color: green;
+    text-align: left;
+}
+
+td.login_td {
+    text-align:left;
 }
 
 #header_01{
@@ -343,6 +359,10 @@ input[type="text"].input_comment{
 
 tr:nth-of-type(odd) {
     background: #eee;
+}
+
+tr:nth-of-type(odd).login_tr {
+    background-color: green;
 }
 
 td.team_fullname,td.team_shortname,td.rank_username{

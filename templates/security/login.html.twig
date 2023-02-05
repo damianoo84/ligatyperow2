@@ -1,30 +1,44 @@
-{#{% extends 'base.html.twig' %}#}
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Liga Typerów</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% block body %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    {% endblock %}
+
+    <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js') }}"></script>
+</head>
+<body>
 
 <div style="display: table;position: absolute;top: 0;left: 0;height: 100%;width: 100%;background-image: url('/images/tlo.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
 
     <div style="display: table-cell;vertical-align: middle;">
 
-        <div style="background-color: transparent;">
+        <div>
 
             <form method="post">
                 {% if error %}
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
 
-                <table style="background-color: green ;border-collapse:collapse;margin: 1%;">
-                    <tr>
-                        <td><label for="inputUsername" style="color: white;">Użytkownik</label></td>
+                <table class="login_table" >
+                    <tr class="login_tr">
+                        <td class="login_td"><label for="inputUsername">Użytkownik</label></td>
                         <td><input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" required autofocus></td>
                     </tr>
-                    <tr>
-                        <td><label for="inputPassword" style="color: white;">Hasło</label></td>
+                    <tr class="login_tr">
+                        <td class="login_td"><label for="inputPassword">Hasło</label></td>
                         <td><input type="password" name="password" id="inputPassword" class="form-control" required></td>
                     </tr>
-                    <tr>
+                    <tr class="login_tr">
                         <td><input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"></td>
-                        <td><button class="btn btn-lg btn-primary" type="submit">Zaloguj się</button></td>
+                        <td class="login_td"><button class="btn btn-lg btn-primary" type="submit">Zaloguj się</button></td>
                     </tr>
                 </table>
 
@@ -35,4 +49,6 @@
     </div>
 </div>
 
-{% endblock %}
+
+</body>
+</html>
