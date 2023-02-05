@@ -620,3 +620,13 @@ table.tab_types3 {
 th.team_user,th.team_user_shortname,th.team_matchday,th.team_matchday_short, th.team_score {
     font-size: xx-small;
 }
+
+img.table_img_korona {
+    height: 10px;
+    width: 10px;
+}
+
+img.table_img_puchar {
+    height: 10px;
+    width: 10px;
+}

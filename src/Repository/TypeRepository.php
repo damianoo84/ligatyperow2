@@ -50,6 +50,8 @@ class TypeRepository extends ServiceEntityRepository
         foreach ($usr as $us){
             $users[$us->getId()]['username'] = $us->getUsername();
             $users[$us->getId()]['ranking'] = $us->getRankingPosition();
+            $users[$us->getId()]['lastWinner'] = $us->getLastWinner();
+            $users[$us->getId()]['liderOfRanking'] = $us->getLiderOfRanking();
         }
 
         // iteruje po aktualnej liczbie kolejek
@@ -86,6 +88,8 @@ class TypeRepository extends ServiceEntityRepository
                 if (!$userTypeStatus) {
                     $points_per_matchday[$key]['username'] = $value['username'];
                     $points_per_matchday[$key]['ranking'] = $value['ranking'];
+                    $points_per_matchday[$key]['lastWinner'] = $value['lastWinner'];
+                    $points_per_matchday[$key]['liderOfRanking'] = $value['liderOfRanking'];
                     $points_per_matchday[$key]['suma'][] = 0;
                 }
 

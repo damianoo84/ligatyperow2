@@ -133,6 +133,16 @@ class User implements UserInterface
     private $numberOfThirdPlaces;
 
     /**
+     * @ORM\Column(type="integer",  nullable=true)
+     */
+    private $lastWinner;
+    
+    /**
+     * @ORM\Column(type="integer",  nullable=true)
+     */
+    private $liderOfRanking;
+    
+    /**
      * @var \DateTime $created
      *
      * @Gedmo\Timestampable(on="create")
@@ -509,6 +519,22 @@ class User implements UserInterface
 
     public function setNumberOfThirdPlaces($numberOfThirdPlaces): void {
         $this->numberOfThirdPlaces = $numberOfThirdPlaces;
+    }
+
+    public function getLastWinner() {
+        return $this->lastWinner;
+    }
+
+    public function getLiderOfRanking() {
+        return $this->liderOfRanking;
+    }
+
+    public function setLastWinner($lastWinner): void {
+        $this->lastWinner = $lastWinner;
+    }
+
+    public function setLiderOfRanking($liderOfRanking): void {
+        $this->liderOfRanking = $liderOfRanking;
     }
 
 

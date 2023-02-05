@@ -52,7 +52,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'FC Barcelona',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 3,
-                'numberofthirdplaces' => 3                 
+                'numberofthirdplaces' => 3, 
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Wojtek',
@@ -72,7 +74,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 3,
                 'numberofsecondplaces' => 2,
-                'numberofthirdplaces' => 2    
+                'numberofthirdplaces' => 2,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Mateusz',
@@ -92,7 +96,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 3     
+                'numberofthirdplaces' => 3,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Marcin1',
@@ -112,7 +118,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 3,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 1     
+                'numberofthirdplaces' => 1,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Krystian',
@@ -132,7 +140,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 1,
                 'numberofsecondplaces' => 2,
-                'numberofthirdplaces' => 3    
+                'numberofthirdplaces' => 3,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Piotrek1',
@@ -152,7 +162,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 3,
                 'numberofsecondplaces' => 4,
-                'numberofthirdplaces' => 4    
+                'numberofthirdplaces' => 4,
+                'lastWinner' => 0,
+                'liderOfRanking' => 1
             ),
             array(
                 'username' => 'Tomek',
@@ -172,7 +184,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 0      
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Michał',
@@ -192,7 +206,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 1    
+                'numberofthirdplaces' => 1,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Adam1',
@@ -212,7 +228,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 0     
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Przemek1',
@@ -232,7 +250,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 0   
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Łukasz1',
@@ -252,7 +272,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 1,
                 'numberofsecondplaces' => 3,
-                'numberofthirdplaces' => 0    
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Piotrek2',
@@ -272,7 +294,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 0    
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Kuba1',
@@ -292,7 +316,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 3,
                 'numberofsecondplaces' => 3,
-                'numberofthirdplaces' => 0    
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Przemek2',
@@ -312,7 +338,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 2,
                 'numberofsecondplaces' => 3,
-                'numberofthirdplaces' => 0   
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Adam2',
@@ -332,7 +360,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 0    
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Piotrek3',
@@ -352,7 +382,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 3,
                 'numberofsecondplaces' => 4,
-                'numberofthirdplaces' => 3   
+                'numberofthirdplaces' => 3,
+                'lastWinner' => 1,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Arek',
@@ -372,7 +404,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 2,
                 'numberofsecondplaces' => 2,
-                'numberofthirdplaces' => 3   
+                'numberofthirdplaces' => 3,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Zbyszek',
@@ -392,7 +426,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 1,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 0    
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Robert',
@@ -412,7 +448,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 0    
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Adrian',
@@ -432,7 +470,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 0    
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Kamil',
@@ -452,7 +492,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 1,
-                'numberofthirdplaces' => 0   
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Kuba2',
@@ -472,7 +514,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 0   
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Piotrek4',
@@ -492,7 +536,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 0  
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Łukasz2',
@@ -512,7 +558,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 0      
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Marcin2',
@@ -532,7 +580,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 0    
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             ),
             array(
                 'username' => 'Grzegorz',
@@ -552,7 +602,9 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'favoriteforeignteam' => 'myteam',
                 'numberoffirstplaces' => 1,
                 'numberofsecondplaces' => 0,
-                'numberofthirdplaces' => 0    
+                'numberofthirdplaces' => 0,
+                'lastWinner' => 0,
+                'liderOfRanking' => 0
             )
 
         );
@@ -580,6 +632,8 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
             $user->setNumberOfFirstPlaces($userDetails['numberoffirstplaces']);
             $user->setNumberOfSecondPlaces($userDetails['numberofsecondplaces']);
             $user->setNumberOfThirdPlaces($userDetails['numberofthirdplaces']);
+            $user->setLastWinner($userDetails['lastWinner']);
+            $user->setLiderOfRanking($userDetails['liderOfRanking']);
             
             $this->addReference('user-'.$userDetails['nick'], $user);
             

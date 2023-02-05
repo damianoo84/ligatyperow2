@@ -20,7 +20,14 @@
 
                 <td class="table_username">
                     <div class="table_username_username">
-                        <span class="testbottom">{{ point.username }}</span>
+                        <span class="testbottom">{{ point.username }}
+                        {% if point.lastWinner == 1 %}
+                            <img class="table_img_korona" src="{{ asset('images/korona2.png') }}" />
+                        {% endif %}
+                        {% if point.liderOfRanking == 1 %}
+                            <img class="table_img_puchar" src="{{ asset('images/puchar2.png') }}" />
+                        {% endif %}
+                        </span>
                     </div>
                     <div class="table_username_ranking">
                         Ranking: {{ point.ranking }}
