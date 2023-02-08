@@ -5,9 +5,8 @@
         <group>
             <file>file:/C:/xampp/htdocs/ligatyperow2/templates/main/table.html.twig</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/src/Repository/TypeRepository.php</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/templates/main/ranking.html.twig</file>
+            <file>file:/C:/xampp/htdocs/ligatyperow2/templates/base.html.twig</file>
             <file>file:/C:/xampp/htdocs/ligatyperow2/public/css/styles.css</file>
-            <file>file:/C:/xampp/htdocs/ligatyperow2/src/Controller/MainController.php</file>
         </group>
     </open-files>
 </project-private>
