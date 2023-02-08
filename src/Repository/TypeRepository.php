@@ -76,6 +76,9 @@ class TypeRepository extends ServiceEntityRepository
                     if (($key == $details['user_id']) && ($details['matchday'] == $i)) {
                         $points_per_matchday[$details['user_id']]['username'] = $details['username'];
                         $points_per_matchday[$details['user_id']]['suma'][] = (int) $details['suma'];
+                        $points_per_matchday[$details['user_id']]['lastWinner'] = $value['lastWinner'];
+                        $points_per_matchday[$details['user_id']]['liderOfRanking'] = $value['liderOfRanking'];
+                        $points_per_matchday[$details['user_id']]['ranking'] = $value['ranking'];
                         $userTypeStatus = true;
                         $sumaAll = (int) $details['suma'];
                         break;
