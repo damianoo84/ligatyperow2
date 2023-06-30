@@ -18,6 +18,7 @@ class LeagueFixtures extends Fixture implements OrderedFixtureInterface{
         $leaguesList = array(
             'Liga Mistrzów',
             'Liga Europy',
+            'Liga Konferencji',
             'Liga Polska',
             'Liga Hiszpańska',
             'Liga Angielska',
@@ -35,6 +36,8 @@ class LeagueFixtures extends Fixture implements OrderedFixtureInterface{
             'Liga Belgijska',
             'Liga Norweska',
             'Liga Austriacka',
+            'Liga Szwajcarska',
+            'Liga Szwedzka',
             'Puchar Anglii',
             'Puchar Włoch',
             'Puchar Hiszpanii',

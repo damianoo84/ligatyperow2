@@ -790,6 +790,11 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
                 'team_name' => 'SV Salzburg',
                 'shortname' => 'SAL',
                 'league' => 'Liga Austriacka'
+            ),
+            array(
+                'team_name' => 'FC Basel',
+                'shortname' => 'BAS',
+                'league' => 'Liga Szwajcarska'
             )
         );
 
