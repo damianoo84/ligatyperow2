@@ -46,7 +46,7 @@ class MeetsFixtures extends Fixture implements OrderedFixtureInterface {
             array(
                 'meet_name' => 'Mecz 4',
                 'team_name_1' => 'Bayern Monachium',
-                'team_name_2' => 'Bayer Leverkusen',
+                'team_name_2' => 'Bayer 04 Leverkusen',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Niemiecka',
                 'term' => 'Piątek,15-09-2023,21:00',
