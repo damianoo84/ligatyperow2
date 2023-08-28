@@ -635,10 +635,10 @@ th.team_user,th.team_user_shortname,th.team_matchday,th.team_matchday_short, th.
 
 img.table_img_korona {
     height: 10px;
-    width: 10px;
+    width: 20px;
 }
 
 img.table_img_puchar {
     height: 10px;
-    width: 10px;
+    width: 20px;
 }
