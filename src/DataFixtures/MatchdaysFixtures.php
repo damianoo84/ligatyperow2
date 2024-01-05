@@ -18,93 +18,93 @@ class MatchdaysFixtures extends Fixture implements OrderedFixtureInterface{
         $matchdaysList = array(
             array(
                 'matchday_name' => '1',
-                'dateFrom' => '2023-09-11',
-                'dateTo' => '2023-09-17',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-02-12',
+                'dateTo' => '2024-02-18',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '2',
-                'dateFrom' => '2023-09-18',
-                'dateTo' => '2023-09-24',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-02-19',
+                'dateTo' => '2024-02-25',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '3',
-                'dateFrom' => '2023-09-25',
-                'dateTo' => '2023-10-01',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-02-26',
+                'dateTo' => '2024-03-03',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '4',
-                'dateFrom' => '2023-10-02',
-                'dateTo' => '2023-10-08',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-03-04',
+                'dateTo' => '2024-03-10',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '5',
-                'dateFrom' => '2023-10-09',
-                'dateTo' => '2023-10-15',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-03-11',
+                'dateTo' => '2024-03-17',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '6',
-                'dateFrom' => '2023-10-16',
-                'dateTo' => '2023-10-22',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-03-18',
+                'dateTo' => '2024-03-24',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '7',
-                'dateFrom' => '2023-10-23',
-                'dateTo' => '2023-10-29',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-03-25',
+                'dateTo' => '2024-03-31',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '8',
-                'dateFrom' => '2023-10-30',
-                'dateTo' => '2023-11-05',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-04-01',
+                'dateTo' => '2024-04-07',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '9',
-                'dateFrom' => '2023-11-06',
-                'dateTo' => '2023-11-12',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-04-08',
+                'dateTo' => '2024-04-14',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '10',
-                'dateFrom' => '2023-11-13',
-                'dateTo' => '2023-11-19',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-04-15',
+                'dateTo' => '2024-04-21',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '11',
-                'dateFrom' => '2023-11-20',
-                'dateTo' => '2023-11-26',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-04-22',
+                'dateTo' => '2024-04-28',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '12',
-                'dateFrom' => '2023-11-27',
-                'dateTo' => '2023-12-03',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-04-29',
+                'dateTo' => '2024-05-05',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '13',
-                'dateFrom' => '2023-12-04',
-                'dateTo' => '2023-12-10',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-05-06',
+                'dateTo' => '2024-05-12',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '14',
-                'dateFrom' => '2023-12-11',
-                'dateTo' => '2023-12-17',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-05-13',
+                'dateTo' => '2024-05-19',
+                'season_name' => 'Wiosna 2024'
             ),
             array(
                 'matchday_name' => '15',
-                'dateFrom' => '2023-12-18',
-                'dateTo' => '2023-12-24',
-                'season_name' => 'Jesień 2023'
+                'dateFrom' => '2024-05-20',
+                'dateTo' => '2024-05-26',
+                'season_name' => 'Wiosna 2024'
             )
         );
         

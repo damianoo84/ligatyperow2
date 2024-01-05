@@ -795,6 +795,41 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
                 'team_name' => 'FC Basel',
                 'shortname' => 'BAS',
                 'league' => 'Liga Szwajcarska'
+            ),
+			array(
+                'team_name' => 'Sturm Graz',
+                'shortname' => 'STU',
+                'league' => 'Liga Austriacka'
+            ),
+			array(
+                'team_name' => 'AZ Alkmaar',
+                'shortname' => 'ALK',
+                'league' => 'Liga Holenderska'
+            ),
+			array(
+                'team_name' => 'Albania',
+                'shortname' => 'ALB',
+                'league' => 'Reprezentacja'
+            ),
+			array(
+                'team_name' => 'Mołdawia',
+                'shortname' => 'MOŁ',
+                'league' => 'Reprezentacja'
+            ),
+			array(
+                'team_name' => 'Wyspy Owcze',
+                'shortname' => 'OWC',
+                'league' => 'Reprezentacja'
+            ),
+			array(
+                'team_name' => 'FC Kopenhaga',
+                'shortname' => 'KOP',
+                'league' => 'Liga Duńska'
+            ),
+			array(
+                'team_name' => 'Girona FC',
+                'shortname' => 'GIR',
+                'league' => 'Liga Hiszpańska'
             )
         );
 

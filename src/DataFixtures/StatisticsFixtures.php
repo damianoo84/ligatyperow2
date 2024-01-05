@@ -298,7 +298,26 @@ class StatisticsFixtures extends Fixture implements OrderedFixtureInterface {
             array('n'=>'Kuba1', 'm2'=>59,'m4'=>4, 'tP'=>134,'p'=>11, 'q'=> 14,'s'=>'Wiosna 2023'),
             array('n'=>'Piotrek4', 'm2'=>46,'m4'=>9, 'tP'=>128,'p'=>12, 'q'=> 15,'s'=>'Wiosna 2023'),
             array('n'=>'Adrian', 'm2'=>47,'m4'=>7, 'tP'=>122,'p'=>13, 'q'=> 14,'s'=>'Wiosna 2023'),
-            array('n'=>'Wojtek', 'm2'=>34,'m4'=>12, 'tP'=>116,'p'=>14, 'q'=> 13,'s'=>'Wiosna 2023')
+            array('n'=>'Wojtek', 'm2'=>34,'m4'=>12, 'tP'=>116,'p'=>14, 'q'=> 13,'s'=>'Wiosna 2023'),
+			
+			array('n'=>'Arek', 'm2'=>66,'m4'=>17, 'tP'=>200,'p'=>1, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Piotrek3', 'm2'=>63,'m4'=>17, 'tP'=>198,'p'=>2, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Robert', 'm2'=>50,'m4'=>24, 'tP'=>196,'p'=>3, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Przemek2', 'm2'=>53,'m4'=>20, 'tP'=>186,'p'=>4, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Krystian', 'm2'=>54,'m4'=>19, 'tP'=>184,'p'=>5, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Zbyszek', 'm2'=>47,'m4'=>22, 'tP'=>182,'p'=>6, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Piotrek1', 'm2'=>51,'m4'=>20, 'tP'=>182,'p'=>6, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Łukasz2', 'm2'=>56,'m4'=>14, 'tP'=>168,'p'=>7, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Damian', 'm2'=>52,'m4'=>15, 'tP'=>164,'p'=>8, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Adrian', 'm2'=>44,'m4'=>19, 'tP'=>164,'p'=>8, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Kamil', 'm2'=>45,'m4'=>18, 'tP'=>162,'p'=>9, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Wojtek', 'm2'=>49,'m4'=>15, 'tP'=>158,'p'=>10, 'q'=> 14,'s'=>'Jesień 2023'),
+			array('n'=>'Piotrek4', 'm2'=>59,'m4'=>8, 'tP'=>150,'p'=>11, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Marcin1', 'm2'=>59,'m4'=>8, 'tP'=>150,'p'=>11, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Grzegorz', 'm2'=>52,'m4'=>11, 'tP'=>148,'p'=>12, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Kuba2', 'm2'=>59,'m4'=>7, 'tP'=>146,'p'=>13, 'q'=> 15,'s'=>'Jesień 2023'),
+			array('n'=>'Kuba1', 'm2'=>51,'m4'=>11, 'tP'=>146,'p'=>13, 'q'=> 13,'s'=>'Jesień 2023')
+			
         );
             
         

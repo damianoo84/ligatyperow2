@@ -38,6 +38,7 @@ class LeagueFixtures extends Fixture implements OrderedFixtureInterface{
             'Liga Austriacka',
             'Liga Szwajcarska',
             'Liga Szwedzka',
+			'Liga Duńska',
             'Puchar Anglii',
             'Puchar Włoch',
             'Puchar Hiszpanii',
