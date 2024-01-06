@@ -796,41 +796,47 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
                 'shortname' => 'BAS',
                 'league' => 'Liga Szwajcarska'
             ),
-			array(
+            array(
                 'team_name' => 'Sturm Graz',
                 'shortname' => 'STU',
                 'league' => 'Liga Austriacka'
             ),
-			array(
+            array(
                 'team_name' => 'AZ Alkmaar',
                 'shortname' => 'ALK',
                 'league' => 'Liga Holenderska'
             ),
-			array(
+            array(
                 'team_name' => 'Albania',
                 'shortname' => 'ALB',
                 'league' => 'Reprezentacja'
             ),
-			array(
+            array(
                 'team_name' => 'Mołdawia',
                 'shortname' => 'MOŁ',
                 'league' => 'Reprezentacja'
             ),
-			array(
+            array(
                 'team_name' => 'Wyspy Owcze',
                 'shortname' => 'OWC',
                 'league' => 'Reprezentacja'
             ),
-			array(
+            array(
                 'team_name' => 'FC Kopenhaga',
                 'shortname' => 'KOP',
                 'league' => 'Liga Duńska'
             ),
-			array(
+            array(
                 'team_name' => 'Girona FC',
                 'shortname' => 'GIR',
                 'league' => 'Liga Hiszpańska'
+            ),
+            array(
+                'team_name' => 'Molde FK',
+                'shortname' => 'MOL',
+                'league' => 'Liga Norweska'
             )
+            
         );
 
         foreach ($teamsList as $teamsDetails) {

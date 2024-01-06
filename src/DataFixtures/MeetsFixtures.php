@@ -18,7 +18,7 @@ class MeetsFixtures extends Fixture implements OrderedFixtureInterface {
         $meetsList = array(
             array(
                 'meet_name' => 'Mecz 01',
-                'team_name_1' => 'Paris Saint Germain',
+                'team_name_1' => 'Paris Saint-Germain',
                 'team_name_2' => 'Real Sociedad',
                 'matchday_name' => 'Kolejka 1',
                 'description' => 'Liga Mistrzów',
