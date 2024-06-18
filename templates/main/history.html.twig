@@ -40,7 +40,7 @@
     <div class="list">
         <br />
         <p class="queque_number">Nr. sezonu</p>
-        {% for i in 1..25 %}
+        {% for i in 1..26 %}
             <a class="history_season_big_screen" href="{{ path('liga_typerow_history', {'season' : i}) }}">{{ get_season_name(i) }}</a> 
             <a class="history_season_small_screen" href="{{ path('liga_typerow_history', {'season' : i}) }}">{{ i }}</a> 
         {% endfor %}

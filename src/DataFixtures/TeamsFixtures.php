@@ -835,6 +835,16 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
                 'team_name' => 'Molde FK',
                 'shortname' => 'MOL',
                 'league' => 'Liga Norweska'
+            ),
+            array(
+                'team_name' => 'Ghana',
+                'shortname' => 'GHA',
+                'league' => 'Reprezentacja'
+            ),
+            array(
+                'team_name' => 'Ekwador',
+                'shortname' => 'EKW',
+                'league' => 'Reprezentacja'
             )
             
         );

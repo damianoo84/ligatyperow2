@@ -316,8 +316,27 @@ class StatisticsFixtures extends Fixture implements OrderedFixtureInterface {
             array('n'=>'Marcin1', 'm2'=>59,'m4'=>8, 'tP'=>150,'p'=>11, 'q'=> 15,'s'=>'Jesień 2023'),
             array('n'=>'Grzegorz', 'm2'=>52,'m4'=>11, 'tP'=>148,'p'=>12, 'q'=> 15,'s'=>'Jesień 2023'),
             array('n'=>'Kuba2', 'm2'=>59,'m4'=>7, 'tP'=>146,'p'=>13, 'q'=> 15,'s'=>'Jesień 2023'),
-            array('n'=>'Kuba1', 'm2'=>51,'m4'=>11, 'tP'=>146,'p'=>13, 'q'=> 13,'s'=>'Jesień 2023')
-			
+            array('n'=>'Kuba1', 'm2'=>51,'m4'=>11, 'tP'=>146,'p'=>13, 'q'=> 13,'s'=>'Jesień 2023'),
+	    
+            array('n'=>'Piotrek4', 'm2'=>48,'m4'=>20, 'tP'=>176,'p'=>1, 'q'=> 15,'s'=>'Wiosna 2024'),
+            array('n'=>'Piotrek1', 'm2'=>44,'m4'=>22, 'tP'=>176,'p'=>1, 'q'=> 15,'s'=>'Wiosna 2024'),
+            array('n'=>'Łukasz2', 'm2'=>44,'m4'=>21, 'tP'=>172,'p'=>2, 'q'=> 15,'s'=>'Wiosna 2024'),
+            array('n'=>'Krystian', 'm2'=>44,'m4'=>18, 'tP'=>160,'p'=>3, 'q'=> 15,'s'=>'Wiosna 2024'),
+            array('n'=>'Przemek2', 'm2'=>36,'m4'=>20, 'tP'=>152,'p'=>4, 'q'=> 15,'s'=>'Wiosna 2024'),
+            array('n'=>'Kuba2', 'm2'=>42,'m4'=>16, 'tP'=>148,'p'=>5, 'q'=> 15,'s'=>'Wiosna 2024'),
+            array('n'=>'Arek', 'm2'=>52,'m4'=>11, 'tP'=>148,'p'=>5, 'q'=> 15,'s'=>'Wiosna 2024'),
+            array('n'=>'Marcin1', 'm2'=>39,'m4'=>17, 'tP'=>146,'p'=>6, 'q'=> 15,'s'=>'Wiosna 2024'),
+            array('n'=>'Zbyszek', 'm2'=>40,'m4'=>16, 'tP'=>144,'p'=>7, 'q'=> 15,'s'=>'Wiosna 2024'),
+            array('n'=>'Damian', 'm2'=>38,'m4'=>17, 'tP'=>144,'p'=>7, 'q'=> 14,'s'=>'Wiosna 2024'),
+            array('n'=>'Piotrek3', 'm2'=>43,'m4'=>13, 'tP'=>138,'p'=>8, 'q'=> 15,'s'=>'Wiosna 2024'),
+            array('n'=>'Robert', 'm2'=>44,'m4'=>12, 'tP'=>136,'p'=>9, 'q'=> 14,'s'=>'Wiosna 2024'),
+            array('n'=>'Kamil', 'm2'=>43,'m4'=>12, 'tP'=>134,'p'=>10, 'q'=> 15,'s'=>'Wiosna 2024'),
+            array('n'=>'Grzegorz', 'm2'=>41,'m4'=>13, 'tP'=>134,'p'=>10, 'q'=> 15,'s'=>'Wiosna 2024'),
+            array('n'=>'Bartek', 'm2'=>42,'m4'=>12, 'tP'=>132,'p'=>11, 'q'=> 14,'s'=>'Wiosna 2024'),
+            array('n'=>'Mateusz', 'm2'=>36,'m4'=>14, 'tP'=>128,'p'=>12, 'q'=> 14,'s'=>'Wiosna 2024'),
+            array('n'=>'Adrian', 'm2'=>43,'m4'=>7, 'tP'=>114,'p'=>13, 'q'=> 13,'s'=>'Wiosna 2024'),
+            array('n'=>'Kuba1', 'm2'=>40,'m4'=>5, 'tP'=>100,'p'=>14, 'q'=> 12,'s'=>'Wiosna 2024'),
+            array('n'=>'Wojtek', 'm2'=>24,'m4'=>4, 'tP'=>64,'p'=>15, 'q'=> 8,'s'=>'Wiosna 2024')
         );
             
         
