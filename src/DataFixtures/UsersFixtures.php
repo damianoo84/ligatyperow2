@@ -608,7 +608,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
             ),
             array(
                 'username' => 'Bartek',
-                'shortname' => 'GR',
+                'shortname' => 'BR',
                 'email' => 'test27test.pl',
                 'password' => '$2a$12$X28920AMUvH0XhwqTLNNHukbpanOC7Tp2W3K1Mei4.I31Se8a0jN6',
                 'numberofwins' => 0,
