@@ -560,6 +560,13 @@ a:visited.type_matchday_big_screen{
 
 /* USTAWIENIA DLA MAŁEGO EKRANU   */
 
+@media (max-width: 768px) {
+    div {
+        background-position: center top;
+    }
+}
+
+
 @media screen and (max-width:680px) {
 
     /* niewidoczne */
