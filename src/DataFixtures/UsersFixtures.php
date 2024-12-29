@@ -82,7 +82,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'username' => 'Mateusz',
                 'shortname' => 'MT',
                 'email' => 'test3@test.pl',
-                'password' => 'DDAAMM',
+                'password' => '$2a$12$PdukZFqxQXhR7FcpNQKRnOnb71cZlzNCd7mZ9VFWqwBooP.Tp9uYe',
                 'numberofwins' => 0,
                 'status' => 1,
                 'priority' => 3,
@@ -163,7 +163,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'numberoffirstplaces' => 3,
                 'numberofsecondplaces' => 4,
                 'numberofthirdplaces' => 4,
-                'lastWinner' => 1,
+                'lastWinner' => 0,
                 'liderOfRanking' => 1
             ),
             array(
@@ -537,7 +537,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
                 'numberofthirdplaces' => 0,
-                'lastWinner' => 1,
+                'lastWinner' => 0,
                 'liderOfRanking' => 0
             ),
             array(
@@ -559,7 +559,7 @@ class UsersFixtures extends Fixture implements OrderedFixtureInterface {
                 'numberoffirstplaces' => 0,
                 'numberofsecondplaces' => 0,
                 'numberofthirdplaces' => 0,
-                'lastWinner' => 0,
+                'lastWinner' => 1,
                 'liderOfRanking' => 0
             ),
             array(
