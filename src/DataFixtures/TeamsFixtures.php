@@ -845,6 +845,16 @@ class TeamsFixtures extends Fixture implements OrderedFixtureInterface
                 'team_name' => 'Ekwador',
                 'shortname' => 'EKW',
                 'league' => 'Reprezentacja'
+            ),
+            array(
+                'team_name' => 'Jagiellonia Białystok',
+                'shortname' => 'JAG',
+                'league' => 'Liga Polska'
+            ),
+            array(
+                'team_name' => 'Stade Brest',
+                'shortname' => 'BRE',
+                'league' => 'Liga Francuska'
             )
             
         );
